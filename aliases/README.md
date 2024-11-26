@@ -2,8 +2,6 @@
 
 A custom collection of Rhino aliases aimed at improving the workflow and modelling efficiency.
 
----
----
 ## Repository Structure
 
 ```plaintext
