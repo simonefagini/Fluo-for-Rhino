@@ -33,7 +33,7 @@ mf '_MoveFace
 nb '_CreateUniqueBlock
 of '_Offset
 p _noecho '_ProjectOsnap _Toggle
-p0 '_SetView _World _Perspective _Shade
+p0 '_SetView _World _Perspective _SetDisplayMode _Shaded
 pcp '_ProjectToCPlane
 pl '_Polyline
 po '_Pointsoff
