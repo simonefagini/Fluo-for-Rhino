@@ -1,6 +1,6 @@
 # Rhino Aliases
 
-A custom collection of Rhino aliases aimed at improving the workflow and modelling efficiency.
+A custom collection of Rhino aliases aimed at improving workflow and modeling efficiency.
 
 ## Alias Files
 
