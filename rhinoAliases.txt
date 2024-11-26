@@ -1,0 +1,67 @@
+4v '_4View _Enter
+a '_SelAll
+aa '_Area _Units e
+ap '_InsertControlPoint
+attach ! -Worksession _Attach Browse
+bb '_BoundingBox _Enter
+be '_BlockEdit
+bu '_BooleanUnion '_MergeAllCoplanarFaces
+c '_Circle
+ca '_Camera _Show
+cc '_CloseCrv
+cp '_Copy
+cv '_Copy _Vertical
+dd '_Distribute 'Pause _Direction
+de '_DupEdge
+dff '_DupFaceBorder
+ex '_Extrudecrv
+gh '_Grasshopper
+hh '_Hide
+hs '_HideSwap
+inhh '_Isolate
+inlo '_Isolatelock
+inn '_Invert
+l '_Line
+lk '_ChangeToCurrentLayer
+ll '_SelLayer
+lo '_SetLayerToObject _HighlightObjectLayers
+m !_Move
+ma '_MatchProperties
+maf '_MergeAllCoplanarFaces
+me '_MoveEdge
+mf '_MoveFace
+nb '_CreateUniqueBlock
+of '_Offset
+p _noecho '_ProjectOsnap _Toggle
+p0 '_SetView _World _Perspective _Shade
+pcp '_ProjectToCPlane
+pl '_Polyline
+po '_Pointsoff
+pon '_Pointson
+pp '_PlanarSrf
+rb '_ReplaceBlock
+rec '_Rectangle _3Point
+ro ! _Rotate
+ro3 ! _Rotate3d
+rotaterandom _-LoadScript "O:\Datentransfer\Simone\HarmonyDistribution.rvb"
+rr '_BlockResetScale
+sc '_Scale
+sc1 '_Scale1d
+sc2 '_Scale2d
+sd '_SelDup
+selrandom _-LoadScript "O:\Datentransfer\Simone\selrandom.rvb"
+sh '_Show
+simonefagini '_What
+set '_SetPt
+sl '_SelLast
+ss '_SelSameBlock
+tr '_Trim
+tt '_Top
+u '_Undo
+un '_Unlock
+uv '_UndoView
+v '_Move _Vertical
+x '_Explode
+xl '_AddGuide
+xxl '_RemoveGuide RemoveAll
+zs '_Zoom _Selected
