@@ -12,9 +12,10 @@ A directory containing aliases and tools used to keep them organized, along with
 
 ## Useful Links
 
+- [Rhinotools](https://github.com/ejnaren/rhinotools/tree/master)  –  Ejnar Brendsdal great toolbox for Rhino (included Rhino v8 by default)
 - [Rhino Commands List](https://docs.mcneel.com/rhino/8/help/en-us/commandlist/command_list.htm)  –  List of all the built-in commands in Rhino 8
 - [Rhino API References](https://developer.rhino3d.com/api/)  –  Comprehensive documentations for Rhino and Grasshopper (RhinoCommon, RhinoScriptSyntax, etc.)
-- [Rhinotools](https://github.com/ejnaren/rhinotools/tree/master)  –  Ejnar Brendsdal great toolbox for Rhino (included Rhino v8 by default)
+- [RhinoCommon in Python](https://developer.rhino3d.com/guides/rhinopython/using-rhinocommon-from-python/)  -  HowTo use RhinoCommon inside of a Python Script
 
 
 
