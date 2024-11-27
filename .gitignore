@@ -1,0 +1,57 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.Trashes
+._*
+.VolumeIcon.icns
+._.DS_Store
+.localized
+
+# Windows system files
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# Blender
+*.blend1
+*.blend2
+*.blend@
+*.blend#
+*.blender_autosave
+*.blend~*
+.blendcache/
+.blender_autosave/
+*.pyc
+__pycache__/
+
+# Rhino
+*.3dm.rhl
+*.bak3dm
+
+# p5.js (JavaScript/HTML)
+*.log
+*.cache
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*.bak
+*.old
+
+# Other miscellaneous
+*.tar
+*.gz
+*.zip
+*.7z
+*.rar
+*.iso
+*.bin
+*.lock
+
+#Python
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
