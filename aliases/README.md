@@ -61,4 +61,4 @@ Contributions are always welcome! If you have suggestions for new aliases or imp
 Sharing is encouraged, and while it's not required, a mention or credit is always appreciated if you share or build upon this work.
 
 ---
-![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg) 
+[![License: GPLv3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/LICENSE)
