@@ -21,6 +21,7 @@ hs '_HideSwap
 inhh '_Isolate
 inlo '_Isolatelock
 inn '_Invert
+k '_SelLast
 l '_Line
 lk '_ChangeToCurrentLayer
 ll '_SelLayer
