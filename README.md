@@ -1,13 +1,22 @@
 # Fluo for Rhino
 
-*Fluo* is a collection of scripts and tools I’ve developed or curated over the past few years to streamline my daily Rhino and Grasshopper workflow.
+*Fluo* is a collection of scripts and tools developed or curated over the past few years to streamline my daily Rhino and Grasshopper workflow.
 
 
 ## Content
 
-### aliases
+```plaintext
 
-A directory containing aliases and tools used to keep them organized, along with utilities to make the import/export process more efficient.
+Fluo-for-Rhino/
+  ├── aliases/
+  ├── commands/
+  ├── scripts/
+  ├── LICENSE
+  └── README.md
+```
+
+- ### aliases
+  A directory containing aliases and tools used to keep them organized, along with utilities to make the import/export process more efficient.
 
 
 ## Useful Links
