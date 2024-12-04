@@ -41,6 +41,7 @@ pl '_Polyline
 po '_Pointson
 poo '_Pointsoff
 pp '_PlanarSrf
+pu '_Purge
 rb '_ReplaceBlock
 rec '_Rectangle _3Point
 ro ! _Rotate
