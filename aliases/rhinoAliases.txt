@@ -1,9 +1,10 @@
-4v '_4View _Enter
+4v '_4View _Enter _Zoom _All _Extents
 a '_SelAll
 aa '_Area _Units e
 ap '_InsertControlPoint
 attach ! -Worksession _Attach Browse
 bb '_BoundingBox _Enter
+bd '_BooleanDifference
 be '_BlockEdit
 bu '_BooleanUnion '_MergeAllCoplanarFaces
 c '_Circle
@@ -56,8 +57,9 @@ simonefagini '_What
 set '_SetPt
 sl '_SelLast
 ss '_SelSameBlock
+t '_CPlane _World _Top
 tr '_Trim
-tt '_Top
+tt _Top
 u '_Undo
 un '_Unlock
 uv '_UndoView
