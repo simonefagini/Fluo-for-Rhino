@@ -51,7 +51,7 @@ aliases/
 
 ## Useful Links
 - [Rhino Aliases](https://docs.mcneel.com/rhino/8/help/en-us/options/aliases.htm)  –  Aliases definition and default
-- [Rhino Macros](https://docs.mcneel.com/rhino/8/help/en-us/information/rhinoscripting.htm)  -  Documentation on how to set a Macro and conventions
+- [Rhino Macros](https://docs.mcneel.com/rhino/8/help/en-us/information/rhinoscripting.htm)  -  Documentation on how to set a Macro and Macro conventions
 - [Naming Conventions in Rhino](https://docs.mcneel.com/rhino/8/help/en-us/information/namingconventions.htm)  –  Unicode characters and naming conventions in Rhino
 
 ## Contributing <br>
