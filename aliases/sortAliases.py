@@ -6,7 +6,7 @@ sortAliases.py
 helping tool to sort aliases alphabetically. 
 rhino stores aliases in the order they are added but displays them alphabetically.
 keeps the rhinoAliases.txt file neatly sorted for version control
-written by simone fagini as part of Fluo-for-Rhino
+Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 nov 2024 in basel, GPL3.0
 """
 
