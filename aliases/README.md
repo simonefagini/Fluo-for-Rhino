@@ -42,7 +42,7 @@ aliases/
 - ### updateAliases.py
   An automation tool written in .py __to offload and then re-import__ all Rhino aliases from a local .txt file. <br>
   To reduce the struggle of manual updates, `updateAliases.txt` helps offload older versions of the alias list and automatically imports the newest version from a .txt file stored in a shared folder or on a local server. This process makes it easier to keep aliases synchronized on different devices or among members of a team. <br>
-<u>See also:</u> [/commands/UrlUpdateAliases_cmd.py](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/UrlUpdateAliases_cmd.py)
+<u>See also:</u> [`/commands/UrlUpdateAliases_cmd.py`](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/UrlUpdateAliases_cmd.py)
 
 - ### sortAliases.py
   Helping tool to __sort aliases alphabetically__.
