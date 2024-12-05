@@ -32,7 +32,7 @@ commands/
 ### Adding a command in Rhino for **Windows**:
 
 1. Run `_EditPythonScript`
-2. Click **New > Command** (to insert image)
+2. Click **New > Command** (**:warning:MISSING IMAGE:warning:**)
 3. Insert a name for the command and a name for the plug-in (first time only).
 4. Paste your code, for instance [`template_cmd.py`](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/template_cmd.py)
 5. Save
@@ -40,7 +40,7 @@ commands/
 7. Run Custom Command<br>
 It may require to run the command from the Rhino Python Editor one first time. :warning:
 
-You can then place all other `customCommands_cmd.py` files inside of the newly created plug-in folder stored at: 
+You can then place all other `customCommands_cmd.py` files inside of the newly created plug-in folder at: 
 ```plaintext
 C:\Users\UserName\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\CustomPlugin{12345678-abcd-1234-efgh-567890abcdef}
 ```
@@ -54,13 +54,13 @@ alias CustomCommand
 As of December 2024, Rhino v8 on Mac OS doesn't support custom command as in Rhino v8 for Windows.<br>
 You can use a simple workaround and load python scripts with an alias.
 
-1. Save the .py script in a predefinied location, for instance:
+1. Save the customCommand_cmd.py in a predefinied location and add it to the `Rhino file search paths`, for instance:
 ```plaintext
-~/Library/Application Support/McNeel/Rhinoceros/7.0/scripts/customCommand_cmd.py
+~/Library/Application Support/McNeel/Rhinoceros/7.0/scripts/
 ```
 2. Create an alias in the format:
 ```plaintext
-! _RunPythonScript ".../scripts/customCommand_cmd.py"
+alias ! _-RunPythonScript "customCommand_cmd.py"
 ```
 
 
@@ -69,7 +69,9 @@ You can use a simple workaround and load python scripts with an alias.
 | Command Name                    | Status                       |
 | ------------------------------- | ---------------------------- |
 | `restoreView_cmd.py`            | :construction: In Progress.. |
-| `LocalUpdateAliases_cmd.py`     | :construction: In Progress..  |
+| `DupAllBorder_cmd.py`           | :construction: In Progress..  |
+| `RotateRandom_cmd.py`           | :construction: In Progress..  |
+| `UnselRandom_cmd.py`            | :construction: In Progress..  |
 | `UrlUpdateAliases_cmd.py`       | :construction: In Progress..  |
 | `ObjectsByLayer_cmd.py`         | :construction: In Progress..  |
 
