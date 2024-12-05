@@ -46,7 +46,7 @@ C:\Users\UserName\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\CustomPlugin{12
 ```
 Additionally you can set up an alias to call the command in the format:
 ```plaintext
-alias CustomCommand
+alias customCommand
 ```
 
 ### Adding a command in Rhino for **Mac OS**:
