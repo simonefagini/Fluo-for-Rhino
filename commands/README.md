@@ -29,15 +29,39 @@ commands/
 
 ## Adding Commands
 
-To add a Command in Rhino on Windows:
+### Adding a command in Rhino for **Windows**:
+
 1. Run `_EditPythonScript`
 2. Click **New > Command** (to insert image)
-3. Insert Code and Save
-4. Relaunch Rhino
-5. Run Custom Command<br>
-It may require to run the command from the Rhino Python Editor one fist time) :warning:
+3. Insert a name for the command and a name for the plug-in (first time only).
+4. Paste your code, for instance [`template_cmd.py`](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/template_cmd.py)
+5. Save
+6. Relaunch Rhino
+7. Run Custom Command<br>
+It may require to run the command from the Rhino Python Editor one first time. :warning:
 
-Commands Location: `/Users/user/Library/Application Support/McNeel/Rhinoceros/7.0/Plug-ins/Plug-in-Name/` (to be double checked)
+You can then place all other `customCommands_cmd.py` files inside of the newly created plug-in folder stored at: 
+```plaintext
+C:\Users\UserName\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\CustomPlugin{12345678-abcd-1234-efgh-567890abcdef}
+```
+Additionally you can set up an alias to call the command in the format:
+```plaintext
+alias CustomCommand
+```
+
+### Adding a command in Rhino for **Mac OS**:
+
+As of December 2024, Rhino v8 on Mac OS doesn't support custom command as in Rhino v8 for Windows.<br>
+You can use a simple workaround and load python scripts with an alias.
+
+1. Save the .py script in a predefinied location, for instance:
+```plaintext
+~/Library/Application Support/McNeel/Rhinoceros/7.0/scripts/customCommand_cmd.py
+```
+2. Create an alias in the format:
+```plaintext
+! _RunPythonScript ".../scripts/customCommand_cmd.py"
+```
 
 
 ## Work in Progress
