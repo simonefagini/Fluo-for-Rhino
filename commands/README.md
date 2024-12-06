@@ -84,7 +84,7 @@ alias ! _-RunPythonScript "customCommand_cmd.py"
 ```
 3. Call the alias to run the script<br><br>
 
-:tip: **NOTE**: If you have a Plug-In package on your Mac - like the `Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}` - and you place it in a `PythonPlugIns/` folder located at
+💡 **NOTE**: If you have a Plug-In package on your Mac - like the `Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}` - and you place it in a `PythonPlugIns/` folder located at
 
 ```plaintext
 /Users/~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/
