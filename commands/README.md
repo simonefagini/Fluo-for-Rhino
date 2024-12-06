@@ -34,6 +34,9 @@ commands/
 1. Run `_EditPythonScript`
 2. Click **File > New**
 3. Insert a name for the command and a name for the plug-in (first time only).
+
+![](/_assets/RhinoEditPythonScriptNewCommand.png)
+
 4. Paste your code, for instance [`template_cmd.py`](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/template_cmd.py)
 5. Save
 6. Relaunch Rhino
