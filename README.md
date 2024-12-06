@@ -18,6 +18,9 @@ Fluo-for-Rhino/
 - ### aliases
   A directory containing aliases and tools used to keep them organized, along with utilities to make the import/export process more efficient.
 
+- ### commands
+  A collection of Python-based Rhino commands designed to enhance functionality and provide useful tools for an improved Rhino experience.  
+
 
 ## Useful Links
 
