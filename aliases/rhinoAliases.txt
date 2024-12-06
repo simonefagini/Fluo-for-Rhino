@@ -1,12 +1,14 @@
 4v '_4View _Enter _Zoom _All _Extents
 a '_SelAll
 aa '_Area _Units e
+ab '_AddObjectsToBlock
 ap '_InsertControlPoint
 attach ! -Worksession _Attach Browse
 bb '_BoundingBox _Enter
 bd '_BooleanDifference
 be '_BlockEdit
 bu '_BooleanUnion '_MergeAllCoplanarFaces
+by '_objectsByLayer
 c '_Circle
 ca '_Camera _Show
 cc '_CloseCrv
@@ -38,9 +40,8 @@ p _noecho '_ProjectOsnap _Toggle
 p0 '_SetView _World _Perspective _SetDisplayMode _Shaded
 pcp '_ProjectToCPlane
 pl '_Polyline
-po '_Pointson
-poo '_Pointsoff
-pp '_PlanarSrf
+po '_allPointsOn
+pp '_PushPull
 pu '_Purge
 rb '_ReplaceBlock
 rec '_Rectangle _3Point
@@ -54,10 +55,11 @@ sc1 '_Scale1d
 sc2 '_Scale2d
 sd '_SelDup
 selrandom _-LoadScript "O:\Datentransfer\Simone\selrandom.rvb"
+set '_SetPt
 sh '_Show
 simonefagini '_What
-set '_SetPt
 sl '_SelLast
+sr '_PlanarSrf
 ss '_SelSameBlock
 t '_CPlane _World _Top
 tr '_Trim
@@ -65,6 +67,7 @@ tt _Top
 u '_Undo
 un '_Unlock
 uv '_UndoView
+updateAliases '_urlUpdateAlias
 v '_Move _Vertical
 x '_Explode
 xl '_AddGuide
