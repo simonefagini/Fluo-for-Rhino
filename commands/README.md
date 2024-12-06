@@ -13,7 +13,7 @@ commands/
 ├── restoreView_cmd.py
 ├── allPointsOn_cmd.py    
 ├── template_cmd.py
-├── Fluo-for-Rhino (df47bd45-3187-4912-8324-4b2288908bb8).zip     
+├── Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip     
 └── README.md
 
 ```
@@ -39,7 +39,7 @@ commands/
   Requires IronPython 3 (urllib2). :warning:<br>
   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
-- ### Fluo-for-Rhino (df47bd45-3187-4912-8324-4b2288908bb8).zip 
+- ### Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip 
    A Rhino plugin that seamlessly bundles all the custom commands from this repository into a     ready-to-use package—simply download and place it in the correct folder.
 
 ## Adding Commands
@@ -60,7 +60,7 @@ It may require running the command from the Rhino Python Editor the first time. 
 
 You can then place all other `customCommands_cmd.py` files inside of the newly created plug-in folder at: 
 ```plaintext
-C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\CustomPlugin (12345678-abcd-1234-efgh-567890abcdef)\dev\
+C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\CustomPlugin {12345678-abcd-1234-efgh-567890abcdef)\dev\
 ```
 Additionally, you can set up an alias to call the command in the format:
 ```plaintext
@@ -82,7 +82,7 @@ alias ! _-RunPythonScript "customCommand_cmd.py"
 ```
 3. Call the alias to run the script<br><br>
 
-**NOTE**: If you have a Plug-In package on your Mac - like the `Fluo-for-Rhino (df47bd45-3187-4912-8324-4b2288908bb8)` - and you place it in a `PythonPlugIns/` folder located at
+**NOTE**: If you have a Plug-In package on your Mac - like the `Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}` - and you place it in a `PythonPlugIns/` folder located at
 
 ```plaintext
 /Users/~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/
