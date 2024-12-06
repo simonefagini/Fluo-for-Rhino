@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-AllPointsOn_cmd.py
+allPointsOn_cmd.py
 A custom Rhino command to merge the functionality of 'PointsOn and 'SolidPtOn.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 Dec 2024 in Basel, GPL3.0
