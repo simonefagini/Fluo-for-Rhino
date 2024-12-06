@@ -9,7 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
-├── AllPointsOn_cmd.py    
+├── allPointsOn_cmd.py    
 ├── template_cmd.py
 ├── Fluo-for-Rhino (df47bd45-3187-4912-8324-4b2288908bb8).zip     
 └── README.md
@@ -19,7 +19,7 @@ commands/
 - ### template_cmd.py
   A template file for creating a custom Rhino command in Python to be executed directly from the Rhino command line.
 
-- ### AllPointsOn_cmd.py
+- ### allPointsOn_cmd.py
   A custom Rhino command to merge the functionality of **_PointsOn** and **_SolidPtOn**.<br>
   Tested on Rhino v7 on MacOS 14.2.1 and Rhino v8 on Windows 11.
 
