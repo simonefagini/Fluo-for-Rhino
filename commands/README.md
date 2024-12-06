@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── obejctsByLayer_cmd.py
 ├── restoreView_cmd.py
 ├── allPointsOn_cmd.py    
 ├── template_cmd.py
@@ -28,6 +29,10 @@ commands/
   A command to restore the named view tied to the active viewport by sharing the same name.
   Ideal for reverting to a saved state after temporarily modifying a view while working on the model.
   If the active viewport is a default view, the command takes no action.
+
+- ### objectsByLayer_cmd.py
+  A command to set the properties of the selected object to "By Layer".
+  Targeted properties: Object Color, Material, Linetype, Print Color, and Print Width.
   
 - ### UrlUpdateAliases_cmd.py
   A quick way to offload and then re-import all Rhino aliases from the latest version of [rhinoAliases.txt](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/aliases/rhinoAliases.txt).<br>
