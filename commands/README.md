@@ -28,11 +28,13 @@ commands/
 - ### restoreView_cmd.py
   A command to restore the named view tied to the active viewport by sharing the same name.
   Ideal for reverting to a saved state after temporarily modifying a view while working on the model.
-  If the active viewport is a default view, the command takes no action.
+  If the active viewport is a default view, the command takes no action.<br>
+  Tested on Rhino v7 on MacOS 14.2.1 and Rhino v8 on Windows 11.
 
 - ### objectsByLayer_cmd.py
-  A command to set the properties of the selected object to "By Layer".
-  Targeted properties: Object Color, Material, Linetype, Print Color, and Print Width.
+  A command to set the properties of the selected object to "By Layer".<br>
+  Targeted properties: Object Color, Material, Linetype, Print Color, and Print Width.<br>
+  Tested on Rhino v7 on MacOS 14.2.1 and Rhino v8 on Windows 11.
   
 - ### UrlUpdateAliases_cmd.py
   A quick way to offload and then re-import all Rhino aliases from the latest version of [rhinoAliases.txt](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/aliases/rhinoAliases.txt).<br>
@@ -82,7 +84,7 @@ alias ! _-RunPythonScript "customCommand_cmd.py"
 ```
 3. Call the alias to run the script<br><br>
 
-**NOTE**: If you have a Plug-In package on your Mac - like the `Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}` - and you place it in a `PythonPlugIns/` folder located at
+:tip: **NOTE**: If you have a Plug-In package on your Mac - like the `Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}` - and you place it in a `PythonPlugIns/` folder located at
 
 ```plaintext
 /Users/~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/
