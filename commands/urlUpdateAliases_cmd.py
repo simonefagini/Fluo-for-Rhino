@@ -39,7 +39,8 @@ def UrlUpdateAliases():
     # Add aliases from txt file
     for i in range (0, len(aliases)):
        rs.AddAlias(aliases[i],commands[i])
-      
+          
+    print("Aliases updated successfully!")
     return
 
 def RunCommand( is_interactive ):
