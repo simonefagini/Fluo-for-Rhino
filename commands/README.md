@@ -10,7 +10,8 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 commands/
 ├── ..
 ├── AllPointsOn_cmd.py    
-├── template_cmd.py        
+├── template_cmd.py
+├── Fluo-for-Rhino (df47bd45-3187-4912-8324-4b2288908bb8).zip     
 └── README.md
 
 ```
@@ -26,6 +27,9 @@ commands/
   A quick way to offload and then re-import all Rhino aliases from the latest version of [rhinoAliases.txt](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/aliases/rhinoAliases.txt).<br>
   Requires IronPython 3 (urllib2). :warning:<br>
   Tested on Rhino v7 on MacOS 14, Rhino v8 on Windows 11.
+
+- ### Fluo-for-Rhino (df47bd45-3187-4912-8324-4b2288908bb8).zip 
+   A Rhino plugin that seamlessly bundles all the custom commands from this repository into a     ready-to-use package—simply download and place it in the correct folder.
 
 ## Adding Commands
 
