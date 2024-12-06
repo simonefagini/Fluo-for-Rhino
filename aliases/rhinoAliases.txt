@@ -67,7 +67,7 @@ tt _Top
 u '_Undo
 un '_Unlock
 uv '_UndoView
-updateAliases '_urlUpdateAlias
+updateAliases '_urlUpdateAliases
 v '_Move _Vertical
 x '_Explode
 xl '_AddGuide
