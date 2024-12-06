@@ -32,17 +32,17 @@ commands/
 ### Adding a command in Rhino for **Windows**:
 
 1. Run `_EditPythonScript`
-2. Click **New > Command** (**:warning:MISSING IMAGE:warning:**)
+2. Click **File > New**
 3. Insert a name for the command and a name for the plug-in (first time only).
 4. Paste your code, for instance [`template_cmd.py`](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/template_cmd.py)
 5. Save
 6. Relaunch Rhino
 7. Run Custom Command<br>
-It may require to run the command from the Rhino Python Editor one first time. :warning:
+It may require running the command from the Rhino Python Editor the first time. :warning:
 
 You can then place all other `customCommands_cmd.py` files inside of the newly created plug-in folder at: 
 ```plaintext
-C:\Users\UserName\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\CustomPlugin{12345678-abcd-1234-efgh-567890abcdef}
+C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\CustomPlugin{12345678-abcd-1234-efgh-567890abcdef}\dev\
 ```
 Additionally you can set up an alias to call the command in the format:
 ```plaintext
