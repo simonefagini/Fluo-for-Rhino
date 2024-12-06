@@ -45,19 +45,19 @@ It may require running the command from the Rhino Python Editor the first time. 
 
 You can then place all other `customCommands_cmd.py` files inside of the newly created plug-in folder at: 
 ```plaintext
-C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\CustomPlugin{12345678-abcd-1234-efgh-567890abcdef}\dev\
+C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\CustomPlugin (12345678-abcd-1234-efgh-567890abcdef)\dev\
 ```
-Additionally you can set up an alias to call the command in the format:
+Additionally, you can set up an alias to call the command in the format:
 ```plaintext
 alias customCommand
 ```
 
 ### Adding a command in Rhino for **Mac OS**:
 
-As of December 2024, Rhino v8 on Mac OS doesn't support custom command as in Rhino v8 for Windows.<br>
-You can use a simple workaround and load python scripts with an alias.
+As of December 2024, Rhino v8 on Mac OS doesn't support custom commands creation as in Rhino v8 for Windows.<br>
+You can use a simple workaround and load Python scripts with an [alias](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/aliases/rhinoAliases.txt).
 
-1. Save the customCommand_cmd.py in a predefinied location and add it to the `Rhino file search paths`, for instance:
+1. Save the customCommand_cmd.py in a predefined location and add it to the `Rhino file search paths`, for instance:
 ```plaintext
 ~/Library/Application Support/McNeel/Rhinoceros/7.0/scripts/
 ```
@@ -65,6 +65,15 @@ You can use a simple workaround and load python scripts with an alias.
 ```plaintext
 alias ! _-RunPythonScript "customCommand_cmd.py"
 ```
+3. Call the alias to run the script<br><br>
+
+**NOTE**: If you have a Plug-In package on your Mac - like the `Fluo-for-Rhino (df47bd45-3187-4912-8324-4b2288908bb8)` - and you place it in a `PythonPlugIns/` folder located at
+
+```plaintext
+/Users/~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/
+```
+Rhino for Mac should still be able to load and run the custom commands.<br>
+Have a look at the [official guide](https://developer.rhino3d.com/en/guides/rhinopython/7/creating-rhino-commands-using-python/) for more info.
 
 
 ## Work in Progress
@@ -79,7 +88,6 @@ alias ! _-RunPythonScript "customCommand_cmd.py"
 | `ObjectsByLayer_cmd.py`         | :construction: In Progress..  |
 
  *Latest update on 04 Dec 2024*                      
-
 
 
 ## Useful Links
