@@ -5,7 +5,7 @@
 restoreView_cmd.py
 A command to restore the named view tied to the active viewport by sharing the same name.
 Ideal for reverting to a saved state after temporarily modifying a view while working on the model.
-If the current viewport is a default view, doens't do anything.
+If the active viewport is a default view, the command takes no action.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 Dec 2024 in Basel, GPL3.0
 """
