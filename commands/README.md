@@ -98,12 +98,9 @@ Have a look at the [official guide](https://developer.rhino3d.com/en/guides/rhin
 
 | Command Name                    | Status                       |
 | ------------------------------- | ---------------------------- |
-| `restoreView_cmd.py`            | :construction: In Progress.. |
-| `DupAllBorder_cmd.py`           | :construction: In Progress..  |
 | `RotateRandom_cmd.py`           | :construction: In Progress..  |
 | `UnselRandom_cmd.py`            | :construction: In Progress..  |
 | `UrlUpdateAliases_cmd.py`       | :construction: In Progress..  |
-| `ObjectsByLayer_cmd.py`         | :construction: In Progress..  |
 
  *Latest update on 04 Dec 2024*                      
 
