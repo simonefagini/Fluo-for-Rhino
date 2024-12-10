@@ -1,6 +1,7 @@
 # Fluo for Rhino
 
 **Fluo** is a collection of scripts and tools developed or curated over the past few years to streamline my daily Rhino and Grasshopper workflow.
+  It's essentially just a personal archive.
 
 
 ## Content
