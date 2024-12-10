@@ -21,7 +21,7 @@ commands/
 ```
 
 - ### Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip 
-   A Rhino plugin that seamlessly bundles all the custom commands from this repository into a     ready-to-use package—simply download and place it in the correct folder.
+   A Rhino plugin that bundles all the custom commands from this repository into a ready-to-use package — simply download, unzip, and place it in the correct folder.
   
 - ### template_cmd.py
   A template file for creating a custom Rhino command in Python to be executed directly from the Rhino command line.
@@ -52,14 +52,15 @@ commands/
   Tested on Rhino v8 on Windows 11.
 
 ## Adding Fluo-for-Rhino
-To add the full bundle of Fluo-for-Rhino to your Rhino environment, just download the .zip file and add it here
+To add the full bundle of **Fluo-for-Rhino** to your Rhino environment, download the .zip file, unzip it, and add the main folder to:
 
 ```plaintext
 C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins
 ```
-💡 **NOTE**: If you already have an older version of the bundle, just replace the folder with the new one.
+💡 **NOTE**: If you already have an older version of the bundle, just replace the old folder with the new one.
+
 ## Adding Commands
-If you want to make your own plug-in or bundle of commands, follow the step below.
+If you want to make your own plug-in or bundle of commands, follow the steps below.
 
 ### Adding a command in Rhino for **Windows**:
 
