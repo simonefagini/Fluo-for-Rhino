@@ -38,7 +38,7 @@ nb '_CreateUniqueBlock
 of '_Offset
 op '_Options
 p _noecho '_ProjectOsnap _Toggle
-p0 '_SetView _World _Perspective _SetDisplayMode _Shaded
+p0 '_namedViewPerspective
 pcp '_ProjectToCPlane
 pl '_Polyline
 po '_allPointsOn
