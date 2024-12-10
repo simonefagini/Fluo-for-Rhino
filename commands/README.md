@@ -20,6 +20,9 @@ commands/
 
 ```
 
+- ### Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip 
+   A Rhino plugin that seamlessly bundles all the custom commands from this repository into a     ready-to-use package—simply download and place it in the correct folder.
+  
 - ### template_cmd.py
   A template file for creating a custom Rhino command in Python to be executed directly from the Rhino command line.
 
@@ -48,10 +51,15 @@ commands/
   Use the [restoreView (rv)](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/restoreView_cmd.py) command to return to the previous Named View state. <br>
   Tested on Rhino v8 on Windows 11.
 
-- ### Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip 
-   A Rhino plugin that seamlessly bundles all the custom commands from this repository into a     ready-to-use package—simply download and place it in the correct folder.
+## Adding Fluo-for-Rhino
+To add the full bundle of Fluo-for-Rhino to your Rhino environment, just download the .zip file and add it here
 
+```plaintext
+C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins
+```
+💡 **NOTE**: If you already have an older version of the bundle, just replace the folder with the new one.
 ## Adding Commands
+If you want to make your own plug-in or bundle of commands, follow the step below.
 
 ### Adding a command in Rhino for **Windows**:
 
@@ -61,13 +69,16 @@ commands/
    
    ![](/.assets/RhinoEditPythonScriptNewCommand.png)
 
-5. Paste your code, for instance [`template_cmd.py`](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/template_cmd.py)
+5. Clear the sample code and paste your own code, for instance [`template_cmd.py`](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/template_cmd.py)
+
+    ![](/.assets/RhinoEditPythonScriptNewCommand.png.png)
+
 6. Save
 7. Relaunch Rhino
 8. Run Custom Command<br>
-It may require running the command from the Rhino Python Editor the first time. :warning:
+The first time you run a Python command after starting Rhino, it may take a few extra seconds to load the Python environment. :warning:
 
-You can then place all other `customCommands_cmd.py` files inside of the newly created plug-in folder at: 
+You can then place all your future `customCommands_cmd.py` files inside of the newly created plug-in folder at: 
 ```plaintext
 C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\CustomPlugin {12345678-abcd-1234-efgh-567890abcdef)\dev\
 ```
