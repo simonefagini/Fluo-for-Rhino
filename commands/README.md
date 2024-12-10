@@ -104,9 +104,10 @@ Have a look at the [official guide](https://developer.rhino3d.com/en/guides/rhin
 
 | Command Name                    | Status                       |
 | ------------------------------- | ---------------------------- |
+| `batchSwitchLayersMaterials_cmd.py`           | :bulb: Planned..  |
 | `RotateRandom_cmd.py`           | :construction: In Progress..  |
 | `UnselRandom_cmd.py`            | :construction: In Progress..  |
-| `UrlUpdateAliases_cmd.py`       | :construction: In Progress..  |
+| `UrlUpdateAliases_cmd.py`       | :test_tube: Needs Testing  |
 
  *Latest update on 04 Dec 2024*                      
 
