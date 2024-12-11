@@ -2,6 +2,7 @@
 a '_SelAll
 aa '_Area _Units e
 ab '_AddObjectsToBlock
+aliasUpdate '_urlUpdateAliases
 ap '_InsertControlPoint
 attach ! -Worksession _Attach Browse
 bb '_BoundingBox _Enter
@@ -69,7 +70,6 @@ tt _Top
 u '_Undo
 un '_Unlock
 uv '_UndoView
-updateAliases '_urlUpdateAliases
 v '_Move _Vertical
 x '_Explode
 xl '_AddGuide
