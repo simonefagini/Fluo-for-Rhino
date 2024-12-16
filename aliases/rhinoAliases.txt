@@ -45,7 +45,7 @@ pcp '_ProjectToCPlane
 pl '_Polyline
 po '_allPointsOn
 pp '_PushPull
-pu '_Purge
+pu '-Purge Enter
 rb '_ReplaceBlock
 rec '_Rectangle _3Point
 ro ! _Rotate
