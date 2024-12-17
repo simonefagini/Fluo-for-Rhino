@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── moveVertical_cmd.py
 ├── namedViewPerspective_cmd.py
 ├── urlUpdateAliases_cmd.py
 ├── obejctsByLayer_cmd.py
@@ -17,7 +18,6 @@ commands/
 ├── template_cmd.py
 ├── Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip     
 └── README.md
-
 ```
 
 - ### Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip 
@@ -50,6 +50,11 @@ commands/
   A command to temporarily switch the current view to a Perspective view, making it easier to orbit and navigate for an improved modeling experience.
   Use the [restoreView (rv)](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/restoreView_cmd.py) command to return to the previous Named View state. <br>
   Tested on Rhino v8 on Windows 11.
+
+- ### moveVertical_cmd.py
+  A command to improve the Move Vertical workflow by preventing Project snap interference when executing the command.
+  Tested on Rhino v8 on Windows 11.
+
 
 ## Adding Fluo-for-Rhino
 To add the full bundle of **Fluo-for-Rhino** to your Rhino environment, download the .zip file, unzip it, and add the main folder to:
@@ -122,7 +127,7 @@ Have a look at the [official guide](https://developer.rhino3d.com/en/guides/rhin
 | `UnselRandom_cmd.py`            | :construction: In Progress..  |
 | `UrlUpdateAliases_cmd.py`       | :test_tube: Needs Testing  |
 
- *Latest update on 10 Dec 2024*                      
+ *Latest update on 17 Dec 2024*                      
 
 
 ## Useful Links
