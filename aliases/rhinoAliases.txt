@@ -47,6 +47,7 @@ po '_allPointsOn
 pp '_PushPull
 pu '-Purge Enter
 rb '_ReplaceBlock
+rd '_Render
 rec '_Rectangle _3Point
 ro ! _Rotate
 ro3 ! _Rotate3d
