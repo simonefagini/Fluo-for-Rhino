@@ -70,7 +70,8 @@ tt _Top
 u '_Undo
 un '_Unlock
 uv '_UndoView
-v '_Move _Vertical
+v '_moveVertical
+vr '_vrayShowVFB
 x '_Explode
 xl '_AddGuide
 xxl '_RemoveGuide RemoveAll
