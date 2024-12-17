@@ -10,16 +10,22 @@ November 2024 in Basel, GPL3.0
 """
 
 import rhinoscriptsyntax as rs
+import Rhino
 
 __commandname__ = "ObjectsByLayer"
 
 def objectsByLayer():
   
     objects = rs.GetObjects(preselect=True)
+    counter = 0
+    totObjects =len(objects)
     
     if objects:
         for obj in objects:
+            counter += 1
             if rs.IsObjectValid(obj):
+                
+                print("Object " + str(counter) + "/" + str(totObjects))
               
                 # Set properties to "By Layer"
                 rs.ObjectColorSource(obj, 0)
