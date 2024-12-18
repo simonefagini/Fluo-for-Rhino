@@ -16,7 +16,8 @@ commands/
 ├── restoreView_cmd.py
 ├── allPointsOn_cmd.py    
 ├── template_cmd.py
-├── Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip     
+├── Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip
+├── AddingPlugins.md    
 └── README.md
 ```
 
@@ -66,7 +67,7 @@ C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins
 💡 **NOTE**: If you already have an older bundle version, replace the existing folder with the new one.
 
 ### Rhino for Mac
-To add the full bundle of **Fluo-for-Rhino** to your Windows environment, download the .zip file, unzip it, and add the main folder to:
+To add the full bundle of **Fluo-for-Rhino** to your Mac OS environment, download the .zip file, unzip it, and add the main folder to:
 
 ```plaintext
 /Users/~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/PythonPlugIns/
