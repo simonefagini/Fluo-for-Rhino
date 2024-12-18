@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── dupAllBorder_cmd.py
 ├── moveVertical_cmd.py
 ├── namedViewPerspective_cmd.py
 ├── urlUpdateAliases_cmd.py
@@ -53,9 +54,12 @@ commands/
   Tested on Rhino v8 on Windows 11.
 
 - ### moveVertical_cmd.py
-  A command to improve the Move Vertical workflow by preventing Project snap interference when executing the command.
-  Tested on Rhino v8 on Windows 11.
+  A command to improve the Move Vertical workflow by preventing Project snap interference when executing the command. <br>
+  Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
+- ### dupAllBorder_cmd.py
+  A custom Rhino command to merge the functionality of 'DupBorder and 'DupFaceBorder. <br>
+  Tested on Rhino v7 on MacOS 14.
 
 ## Adding Fluo-for-Rhino
 ### Rhino for Windows
