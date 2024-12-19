@@ -15,6 +15,7 @@ ca '_Camera _Show
 cc '_CloseCrv
 cp '_Copy
 cv '_Copy _Vertical
+db '_dupAllBorder
 dd '_Distribute 'Pause _Direction
 de '_DupEdge
 dff '_DupFaceBorder
