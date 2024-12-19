@@ -59,7 +59,8 @@ commands/
 
 - ### dupAllBorder_cmd.py
   A custom Rhino command to merge the functionality of 'DupBorder and 'DupFaceBorder. <br>
-  Tested on Rhino v7 on MacOS 14.
+  💡 **NOTE**: It does not support the preselection of Brep faces. <br>
+  Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
 ## Adding Fluo-for-Rhino
 ### Rhino for Windows
