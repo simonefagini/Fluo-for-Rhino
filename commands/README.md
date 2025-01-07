@@ -62,6 +62,30 @@ commands/
   It does not support the preselection of Brep faces. :warning:<br>
   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
+- ### centerOsnapToggle_cmd.py
+    A command to toggle the **Center** object snap on and off in Rhino. <br>
+    This provides a quick way to enable or disable snapping to the center of circles and arcs during modeling.
+
+   The command modifies the targeted osnap setting using **bitwise operations** to preserve the state of other active osnaps.
+
+   #### List of osnap values:
+   ```
+   0           None  
+   2           Near  
+   8           Focus  
+   32          Center  
+   64          Vertex  
+   128         Knot  
+   512         Quadrant  
+   2048        Midpoint  
+   8192        Intersection  
+   0x20000     End (or 131072)  
+   0x80000     Perpendicular (or 524288)  
+   0x200000    Tangent (or 2097152)  
+   0x8000000   Point (or 8388608)
+   ```
+   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+
 ## Adding Fluo-for-Rhino
 ### Rhino for Windows
 To add the full bundle of **Fluo-for-Rhino** to your Windows environment, download the .zip file, unzip it, and add the main folder to:
