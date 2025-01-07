@@ -13,6 +13,7 @@ by '_objectsByLayer
 c '_Circle
 ca '_Camera _Show
 cc '_CloseCrv
+ce '_centerOsnap
 cp '_Copy
 cv '_Copy _Vertical
 db '_dupAllBorder
