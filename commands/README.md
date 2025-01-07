@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── centerOsnap_cmd.py
 ├── dupAllBorder_cmd.py
 ├── moveVertical_cmd.py
 ├── namedViewPerspective_cmd.py
