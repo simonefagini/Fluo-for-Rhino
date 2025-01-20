@@ -116,7 +116,6 @@ If you want to make your own plug-in or bundle of commands, follow the steps in 
 | `batchSwitchLayersMaterials_cmd.py`           | :bulb: Planned..  |
 | `RotateRandom_cmd.py`           | :construction: In Progress..  |
 | `UnselRandom_cmd.py`            | :construction: In Progress..  |
-| `UrlUpdateAliases_cmd.py`       | :test_tube: Needs Testing  |
 
  *Latest update on 07 Jan 2025*                      
 
