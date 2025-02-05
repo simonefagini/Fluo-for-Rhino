@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+importLayerStructure.py
+Import the layer structure from a selected file to the current Rhino document.
+Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
+January 2025 in Basel, GPL3.0
+"""
+
+
 import Rhino
 import rhinoscriptsyntax as rs
 
