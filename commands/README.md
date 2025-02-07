@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── keep_cmd.py
 ├── centerOsnap_cmd.py
 ├── dupAllBorder_cmd.py
 ├── moveVertical_cmd.py
@@ -86,6 +87,10 @@ commands/
    0x8000000   Point (or 8388608)
    ```
    Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+
+- ### keep_cmd.py
+  A command to randomly keep a user-defined percentage of pre-selected objects in Rhino, useful for quick decimation and random sampling.<br>
+  Tested on Rhino v8 on Windows 11.
 
 ## Adding Fluo-for-Rhino
 ### Rhino for Windows
