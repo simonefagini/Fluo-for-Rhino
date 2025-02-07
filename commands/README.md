@@ -118,8 +118,9 @@ If you want to make your own plug-in or bundle of commands, follow the steps in 
 
 | Command Name                    | Status                       |
 | ------------------------------- | ---------------------------- |
-| `batchSwitchLayersMaterials_cmd.py`           | :bulb: Planned..  |
-| `RotateRandom_cmd.py`           | :construction: In Progress..  |
+| `batchSwitchLayersMaterials_cmd.py`           | :bulb: Planned  |
+| `RotateRandom_cmd.py`           | :construction: In Progress  |
+| `objects2sublayers_cmd.py`           | 🐞 Debugging  |
 
  *Latest update on 07 Feb 2025*                      
 
