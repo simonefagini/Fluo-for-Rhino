@@ -32,6 +32,7 @@ l '_Line
 lk '_ChangeToCurrentLayer
 ll '_SelLayer
 lo '_SetLayerToObject _HighlightObjectLayers
+lp '_OneLayerOff
 m !_Move
 ma '_MatchProperties
 maf '_MergeAllCoplanarFaces
