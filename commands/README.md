@@ -92,34 +92,35 @@ commands/
 
 - ### keep_cmd.py
   A command to randomly keep a user-defined percentage of pre-selected objects in Rhino, useful for quick decimation and random sampling.<br>
-  Tested on Rhino v8 on Windows 11.
+  Tested on Rhino v8 on Windows 11.<br>
 
 - ### axo_cmd.py
-  Python script for Rhino that deforms selected objects into axonometric projections based on customizable rotation angles.
-  Data is preserved as object attributes for an undestructive workflow,  with full block compatibility.
-  The 'deaxo' command reverts objects to their original condition.
+  Python script for Rhino that deforms selected objects into axonometric projections based on customizable rotation angles.<br>
+  Data is preserved as object attributes for an undestructive workflow,  with full block compatibility.<br>
+  The 'deaxo' command reverts objects to their original condition.<br>
 
   ![](/.assets/AttributeAxoCommand.png)
 
-   This command was inspired and made possible by this [old pdf](https://www.epfl.ch/schools/enac/atelier-maquettes/wp-content/uploads/2023/08/Creating-an-Axonometric-View-in-Rhino-1.pdf) from *EPFL Lausanne*.
-   If you prefer the Macro, you can copy/paste from below.
+   This command was inspired and made possible by this [old pdf](https://www.epfl.ch/schools/enac/atelier-maquettes/wp-content/uploads/2023/08/Creating-an-Axonometric-View-in-Rhino-1.pdf) from *EPFL Lausanne*.<br>
+   If you prefer the **macro**, you can copy/paste from below.<br>
 
    ```plaintext
    ! _Select _Pause _SetActiveViewport Top _Rotate 0 30 _SetActiveViewport Right _Shear w0 w0,0,1 -45       _SetActiveViewport Top _Zoom _All _Extents
    ```
-
+   Tested on Rhino v8 on Windows 11.<br>
 
 - ### deaxo_cmd.py
-  Companion command to revert axonometrically projected objects back to their original condition with a single click.
-  Maintains all object properties while removing projection transformations, keeping your Rhino workflow seamless and non-destructive.
-  Written to be used in documents where the "axo" command has previously been executed
+  Companion command to revert axonometrically projected objects back to their original condition with a single click.<br>
+  Maintains all object properties while removing projection transformations, keeping your Rhino workflow seamless and non-destructive.<br>
+  Written to be used in documents where the "axo" command has previously been executed. :warning:<br>
 
-   If you prefer the Macro, you can copy/paste from below.
+   If you prefer the **macro**, you can copy/paste from below.<br>
 
    ```plaintext
    ! _Select _Pause _Right _SetActiveViewport Right _Shear w0 w0,0,1 +45 _Top _SetActiveViewport Top _Rotate 0 -30       _Perspective _SetActiveViewport Perspective _Zoom _All _Extents
 
    ```
+   Tested on Rhino v8 on Windows 11.<br>
 
 ## Adding Fluo-for-Rhino
 ### Rhino for Windows
