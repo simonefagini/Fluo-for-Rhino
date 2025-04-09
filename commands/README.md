@@ -9,6 +9,8 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── deaxo_cmd.py
+├── axo_cmd.py
 ├── keep_cmd.py
 ├── centerOsnap_cmd.py
 ├── dupAllBorder_cmd.py
@@ -91,6 +93,18 @@ commands/
 - ### keep_cmd.py
   A command to randomly keep a user-defined percentage of pre-selected objects in Rhino, useful for quick decimation and random sampling.<br>
   Tested on Rhino v8 on Windows 11.
+
+- ### axo_cmd.py
+  Python script for Rhino that deforms selected objects into axonometric projections based on customizable rotation angles.
+  Data is preserved as object attributes for an undestructive workflow,  with full block compatibility.
+  The 'deaxo' command reverts objects to their original condition.
+
+  ![](/.assets/AttributeAxoCommand.png)
+
+- ### deaxo_cmd.py
+  Companion command to revert axonometrically projected objects back to their original condition with a single click.
+  Maintains all object properties while removing projection transformations, keeping your Rhino workflow seamless and non-destructive.
+  Written to be used in documents where the "axo" command has previously been executed
 
 ## Adding Fluo-for-Rhino
 ### Rhino for Windows
