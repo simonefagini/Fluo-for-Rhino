@@ -20,7 +20,7 @@ scripts/
 ## Running Scripts
 You can launch the command `EditPythonScript`, open your script.py and then launch it from there.
 Alternatively, if you frequently use the script, you can assign it to an alias to make it faster to load.
-Have a look at the (how-to)[https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/AddingPlugins.md#adding-a-command-in-rhino-for-mac-os]
+Have a look at the [how-to.](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/AddingPlugins.md#adding-a-command-in-rhino-for-mac-os)
 
 
 
