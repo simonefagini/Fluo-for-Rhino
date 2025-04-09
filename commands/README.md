@@ -101,10 +101,25 @@ commands/
 
   ![](/.assets/AttributeAxoCommand.png)
 
+   This command was inspired and made possible by this [old pdf](https://www.epfl.ch/schools/enac/atelier-maquettes/wp-content/uploads/2023/08/Creating-an-Axonometric-View-in-Rhino-1.pdf) from *EPFL Lausanne*.
+   If you prefer the Macro, you can copy/paste from below.
+
+   ```plaintext
+   ! _Select _Pause _SetActiveViewport Top _Rotate 0 30 _SetActiveViewport Right _Shear w0 w0,0,1 -45       _SetActiveViewport Top _Zoom _All _Extents
+   ```
+
+
 - ### deaxo_cmd.py
   Companion command to revert axonometrically projected objects back to their original condition with a single click.
   Maintains all object properties while removing projection transformations, keeping your Rhino workflow seamless and non-destructive.
   Written to be used in documents where the "axo" command has previously been executed
+
+   If you prefer the Macro, you can copy/paste from below.
+
+   ```plaintext
+   ! _Select _Pause _Right _SetActiveViewport Right _Shear w0 w0,0,1 +45 _Top _SetActiveViewport Top _Rotate 0 -30       _Perspective _SetActiveViewport Perspective _Zoom _All _Extents
+
+   ```
 
 ## Adding Fluo-for-Rhino
 ### Rhino for Windows
