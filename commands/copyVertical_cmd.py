@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-moveVertical_cmd.py
+copyVertical_cmd.py
 A command to improve the Copy Vertical workflow by preventing Project snap interference when executing the command.
 The intended workflow starts with a selected object.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
