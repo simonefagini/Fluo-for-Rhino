@@ -128,6 +128,11 @@ commands/
   A command to improve the Copy Vertical workflow by preventing Project snap interference when executing the command. <br>
   The intended workflow starts with a selected object. <br>
   Tested on Rhino v8 on Windows 11.
+  
+- ### whichMaterial_cmd.py
+  A command to check which material is applied to a selected object, or to the objects within a selected block, and return the material name for quick and easy identification.<br>
+  Tested on Rhino v8 on Windows 11.
+
 
 ## Adding Fluo-for-Rhino
 ### Rhino for Windows
