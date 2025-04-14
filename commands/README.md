@@ -134,28 +134,6 @@ commands/
   Tested on Rhino v8 on Windows 11.
 
 
-## Adding Fluo-for-Rhino
-### Rhino for Windows
-To add the full bundle of **Fluo-for-Rhino** to your Windows environment, download the .zip file, unzip it, and add the main folder to:
-
-```plaintext
-C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\
-```
-💡 **NOTE**: If you already have an older bundle version, replace the existing folder with the new one.
-
-### Rhino for Mac
-To add the full bundle of **Fluo-for-Rhino** to your Mac OS environment, download the .zip file, unzip it, and add the main folder to:
-
-```plaintext
-/Users/~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/PythonPlugIns/
-```
-
-
-💡 **NOTE**: If you already have an older bundle version, replace the existing folder with the new one.
-
-### Creating a new bundle
-If you want to make your own plug-in or bundle of commands, follow the steps in the short [guide](/commands/AddingPlugins.md).
-
 ## Work in Progress
 
 | Command Name                    | Status                       |
