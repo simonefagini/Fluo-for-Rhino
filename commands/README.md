@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── copyVertical_cmd.py
 ├── deaxo_cmd.py
 ├── axo_cmd.py
 ├── keep_cmd.py
@@ -59,6 +60,7 @@ commands/
 
 - ### moveVertical_cmd.py
   A command to improve the Move Vertical workflow by preventing Project snap interference when executing the command. <br>
+  The intended workflow starts with a selected object. <br>
   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
 - ### dupAllBorder_cmd.py
@@ -121,6 +123,11 @@ commands/
 
    ```
    Tested on Rhino v8 on Windows 11.<br>
+
+- ### copyVertical_cmd.py
+  A command to improve the Copy Vertical workflow by preventing Project snap interference when executing the command. <br>
+  The intended workflow starts with a selected object. <br>
+  Tested on Rhino v8 on Windows 11.
 
 ## Adding Fluo-for-Rhino
 ### Rhino for Windows
