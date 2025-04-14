@@ -20,7 +20,32 @@ Fluo-for-Rhino/
   A directory containing aliases and tools used to keep them organized, along with utilities to make the import/export process more efficient.
 
 - ### commands
-  A collection of Python-based Rhino commands designed to enhance functionality and provide useful tools for an improved Rhino experience.  
+  A collection of Python-based Rhino commands designed to enhance functionality and provide useful tools for an improved Rhino experience.
+
+- ### scripts
+  A set of Python scripts for Rhino that tackle those odd, time-consuming tasks you don’t run into every day—but hate doing by hand. 
+
+## Adding Fluo-for-Rhino
+### Rhino for Windows
+To add the full bundle of **Fluo-for-Rhino** to your Windows environment, download the .zip file, unzip it, and add the main folder to:
+
+```plaintext
+C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\
+```
+💡 **NOTE**: If you already have an older bundle version, replace the existing folder with the new one.
+
+### Rhino for Mac
+To add the full bundle of **Fluo-for-Rhino** to your Mac OS environment, download the .zip file, unzip it, and add the main folder to:
+
+```plaintext
+/Users/~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/PythonPlugIns/
+```
+
+
+💡 **NOTE**: If you already have an older bundle version, replace the existing folder with the new one.
+
+### Creating a new bundle
+If you want to make your own plug-in or bundle of commands, follow the steps in the short [guide](/commands/AddingPlugins.md).
 
 
 ## Useful Links
