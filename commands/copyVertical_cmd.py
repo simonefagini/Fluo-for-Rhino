@@ -11,7 +11,7 @@ April 2025 in Basel, GPL3.0
 
 import rhinoscriptsyntax as rs
 
-__commandname__ = "CopyVertical"
+__commandname__ = "copyVertical"
 
 
 def copyVertical():
