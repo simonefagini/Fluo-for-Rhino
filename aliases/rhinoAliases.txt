@@ -61,7 +61,6 @@ sc '_Scale
 sc1 '_Scale1d
 sc2 '_Scale2d
 sd '_SelDup
-selrandom _-LoadScript "O:\Datentransfer\Simone\selrandom.rvb"
 set '_SetPt
 sh '_Show
 simonefagini '_What
