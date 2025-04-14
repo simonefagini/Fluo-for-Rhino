@@ -9,12 +9,18 @@ A collection of Python-based Rhino scripts to improve my day-to-day Rhino experi
 ..
 scripts/
 ├── ..
+├── objects2sublayers.py 
 ├── importLayerStructure.py   
 └── README.md
 ```
 
 - ### importLayerStructure.py
-  A simple script to import the layer structure (name, childs, color, visible, locked) from one Rhino file to the active one.
+  A simple script to import the layer structure (name, childs, color, visible, locked) from one Rhino file to the active one. <br>
+  Tested on Rhino v8 on Windows 11.
+
+- ### objects2sublayers.py
+  A script to divide multiple instances of the same named block into a user-defined number of groups, organizing them into sublayers under a user-specified parent layer. <br>
+  This is especially useful for subtly varying materials or colors across groups while maintaining overall block consistency. <br>
   Tested on Rhino v8 on Windows 11.
 
 ## Running Scripts
@@ -31,8 +37,9 @@ Have a look at the [how-to.](https://github.com/simonefagini/Fluo-for-Rhino/blob
 | ------------------------------- | ---------------------------- |
 | `layerMatchProperties.py`           | :test_tube: Needs Testing  |
 | `urlUpdateAliases_cmd.py`       | :test_tube: Needs Testing  |
+| `objects2sublayers.py`           | 🐞 Debugging  |
 
- *Latest update on 20 Jan 2025*                      
+ *Latest update on 14 April 2025*                      
 
 
 ## Useful Links
