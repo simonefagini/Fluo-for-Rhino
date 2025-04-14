@@ -15,7 +15,7 @@ ca '_Camera _Show
 cc '_CloseCrv
 ce '_centerOsnap
 cp '_Copy
-cv '_Copy _Vertical
+cv '_copyVertical
 db '_dupAllBorder
 dd '_Distribute 'Pause _Direction
 de '_DupEdge
