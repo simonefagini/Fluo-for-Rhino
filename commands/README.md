@@ -157,9 +157,12 @@ If you want to make your own plug-in or bundle of commands, follow the steps in 
 | ------------------------------- | ---------------------------- |
 | `batchSwitchLayersMaterials_cmd.py`           | :bulb: Planned  |
 | `RotateRandom_cmd.py`           | :construction: In Progress  |
+| `whichMaterial_cmd.py`           | :construction: In Progress |
+| `dupAllBorder_cmd.py`           | 🐞 Debugging  |
 | `objects2sublayers_cmd.py`           | 🐞 Debugging  |
+| `pastePoint_cmd.py`           | 🐞 Debugging  |
 
- *Latest update on 07 Feb 2025*                      
+ *Latest update on 14 Apr 2025*                      
 
 
 ## Useful Links
