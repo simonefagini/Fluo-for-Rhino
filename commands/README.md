@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── rotateRandom_cmd.py
 ├── pointPaste_cmd.py
 ├── whichMaterial_cmd.py
 ├── copyVertical_cmd.py
@@ -136,6 +137,10 @@ commands/
   Assign to use with the Ctrl+Shift+V. <br>
   Tested on Rhino v8 on Windows 11.
 
+- ### pastePoint_cmd.py
+  A command to randomly rotate selected objects individually around their own center points. <br>
+  Adds a touch of chaos and variation. <br>
+  Tested on Rhino v8 on Windows 11.
 
 ## Work in Progress
 
