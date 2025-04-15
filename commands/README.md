@@ -143,10 +143,13 @@ commands/
 
 | Command Name                    | Status                       |
 | ------------------------------- | ---------------------------- |
-| `batchSwitchLayersMaterials_cmd.py`           | :bulb: Planned  |
-| `RotateRandom_cmd.py`           | :construction: In Progress  |
+| `pastePoint_cmd.py`           | 🧭 Beta       |
 | `dupAllBorder_cmd.py`           | 🐞 Debugging  |
-| `pastePoint_cmd.py`           | 🐞 Debugging  |
+| `RotateRandom_cmd.py`           | :construction: In Progress  |
+| `batchSwitchLayersMaterials_cmd.py`           | :bulb: Planned  |
+
+
+
 
  *Latest update on 14 Apr 2025*                      
 
