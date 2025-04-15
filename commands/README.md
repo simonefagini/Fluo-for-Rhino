@@ -9,6 +9,8 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── pointPaste_cmd.py
+├── whichMaterial_cmd.py
 ├── copyVertical_cmd.py
 ├── deaxo_cmd.py
 ├── axo_cmd.py
@@ -22,14 +24,10 @@ commands/
 ├── restoreView_cmd.py
 ├── allPointsOn_cmd.py    
 ├── template_cmd.py
-├── Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip
 ├── AddingPlugins.md    
 └── README.md
 ```
 
-- ### Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}.zip 
-   A Rhino plugin that bundles all the custom commands from this repository into a ready-to-use package — simply download, unzip, and place it in the correct folder.
-  
 - ### template_cmd.py
   A template file for creating a custom Rhino command in Python to be executed directly from the Rhino command line.
 
