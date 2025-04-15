@@ -133,6 +133,11 @@ commands/
   A command to check which material is applied to a selected object, or to the objects within a selected block, and return the material name for quick and easy identification.<br>
   Tested on Rhino v8 on Windows 11.
 
+- ### pastePoint_cmd.py
+  A command to paste clipboard content at a picked point in Rhino, bypassing the default behavior of pasting to original coordinates. <br>
+  Assign to use with the Ctrl+Shift+V. <br>
+  Tested on Rhino v8 on Windows 11.
+
 
 ## Work in Progress
 
