@@ -147,8 +147,9 @@ commands/
 | Command Name                    | Status                       |
 | ------------------------------- | ---------------------------- |
 | `pastePoint_cmd.py`           | 🧭 Beta       |
+| `rotateRandom_cmd.py`           | 🧭 Beta    |
 | `dupAllBorder_cmd.py`           | 🐞 Debugging  |
-| `RotateRandom_cmd.py`           | :construction: In Progress  |
+| `blocksAbacus.py`           | :construction: In Progress  |
 | `batchSwitchLayersMaterials_cmd.py`           | :bulb: Planned  |
 
 
