@@ -9,6 +9,8 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── unshake_cmd.py
+├── shake_cmd.py
 ├── rotateRandom_cmd.py
 ├── pointPaste_cmd.py
 ├── whichMaterial_cmd.py
@@ -141,7 +143,17 @@ commands/
   A command to randomly rotate selected objects individually around their own center points. <br>
   Adds a touch of chaos and variation. <br>
   Tested on Rhino v8 on Windows 11.
+  
+- ### shake_cmd.py
+  A command to randomly rotate selected objects individually around their own center points, adding a touch of chaos and variation. <br>
+  Rotation data is stored in each object's attributes for easy reversibility using unshake_cmd.py. <br>
+  Tested on Rhino v8 on Windows 11.
 
+- ### unshake_cmd.py
+  A command to restore objects affected by shake_cmd.py to their original orientation, using the stored rotation data in their attributes. <br>
+  Tested on Rhino v8 on Windows 11.
+  
+ 
 ## Work in Progress
 
 | Command Name                    | Status                       |
