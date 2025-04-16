@@ -145,12 +145,13 @@ commands/
   Tested on Rhino v8 on Windows 11.
   
 - ### shake_cmd.py
-  A command to randomly rotate selected objects individually around their own center points, adding a touch of chaos and variation. <br>
-  Rotation data is stored in each object's attributes for easy reversibility using unshake_cmd.py. <br>
+  A command to randomly rotate selected objects individually around their own center points. <br>
+  Adds a touch of chaos and variation. <br>
+  Rotation data is stored in each object's attributes for easy reversibility using 'unshake_cmd.py'. <br>
   Tested on Rhino v8 on Windows 11.
 
 - ### unshake_cmd.py
-  A command to restore objects affected by shake_cmd.py to their original orientation, using the stored rotation data in their attributes. <br>
+  A command to restore objects affected by 'shake_cmd.py' to their original orientation, using the stored rotation data in their attributes. <br>
   Tested on Rhino v8 on Windows 11.
   
  
