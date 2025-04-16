@@ -81,6 +81,7 @@ def getAngles(axis):
     return xRot, yRot, zRot
 
 def rotateRandom():
+    counter = 1
     centerPoints = []
     rotationAmounts = []
     
@@ -105,6 +106,7 @@ def rotateRandom():
     
     for point in centerPoints:
         print("Rotating objects....")
+        
         xRotation = random.uniform(0,maxRotation[0])
         yRotation = random.uniform(0,maxRotation[1])
         zRotation = random.uniform(0,maxRotation[2])
@@ -113,6 +115,8 @@ def rotateRandom():
     
     
     for index, (id, center, rotation) in enumerate(zip(ids, centerPoints, rotationAmounts)):
+        print(str(counter) + " / " + str(len(ids)))
+        counter += 1
         rs.RotateObject(id, center, rotationAmounts[index][0], axis=[1,0,0])  # X-axis rotation
         rs.RotateObject(id, center, rotationAmounts[index][1], axis=[0,1,0])  # Y-axis rotation 
         rs.RotateObject(id, center, rotationAmounts[index][2], axis=[0,0,1])  # Z-axis rotation
