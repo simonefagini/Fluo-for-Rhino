@@ -66,7 +66,7 @@ sh '_Show
 simonefagini '_What
 sl '_SelLast
 sr '_PlanarSrf
-ss '_SelSameBlock
+ss _-SelBlockInstanceNamed _SelectBlockToMatch
 t '_CPlane _World _Top
 tr '_Trim
 tt _Top
