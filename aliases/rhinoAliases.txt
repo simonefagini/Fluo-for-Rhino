@@ -54,7 +54,6 @@ rd '_Render
 rec '_Rectangle _3Point
 ro ! _Rotate
 ro3 ! _Rotate3d
-rotaterandom _-LoadScript "O:\Datentransfer\Simone\HarmonyDistribution.rvb"
 rr '_BlockResetScale
 rv '_RestoreView
 sc '_Scale
