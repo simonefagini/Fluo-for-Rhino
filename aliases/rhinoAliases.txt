@@ -29,6 +29,7 @@ inlo '_Isolatelock
 inn '_Invert
 k '_SelLast
 l '_Line
+lc '_Lock
 lk '_ChangeToCurrentLayer
 ll '_SelLayer
 lo '_SetLayerToObject _HighlightObjectLayers
