@@ -36,6 +36,7 @@ lo '_SetLayerToObject _HighlightObjectLayers
 lp '_OneLayerOff
 m !_Move
 ma '_MatchProperties
+mma '_MatchMapping
 maf '_MergeAllCoplanarFaces
 me '_MoveEdge
 mf '_MoveFace
