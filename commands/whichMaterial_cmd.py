@@ -59,7 +59,11 @@ def returnMaterial():
        refLayer = (rs.ObjectLayer(ids[0]))
        layer = rs.LayerId(refLayer)
        material_index = rs.LayerMaterialIndex(layer)
+       if material_index == -1:
+           print("No materials assigned to object")
+           return
        material_name = rs.MaterialName(material_index)
+       
        user_input = rs.ListBox([material_name], "Choose a material to copy to clipboard", "Materials")
        if user_input is not None:
            cleaned_input = user_input.replace("/", "")
