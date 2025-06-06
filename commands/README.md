@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── Fluo_cmd.py
 ├── count_cmd.py
 ├── unshake_cmd.py
 ├── shake_cmd.py
@@ -157,6 +158,9 @@ commands/
 
 - ### count_cmd.py
   A simple command to count selected objects and return a summary of their types and quantities. <br>
+
+- ### Fluo_cmd.py
+  Just an excuse to initialize the Fluo-for-Rhino pack at every Rhino start-up. Must be idle with a [Visual Basic Rhino Script](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/scripts/initializeFluo4Rhino.rvb). <br>
   
   #### List of object types:
    ```
