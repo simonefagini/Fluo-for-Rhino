@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+"""
+objects2sublayers.py
+Randomly spreads selected objects into a chosen number of new sublayers, each with its own color.
+Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
+April 2025 in Basel, GPL3.0
+"""
+
+
 import rhinoscriptsyntax as rs
 import scriptcontext
 import random
