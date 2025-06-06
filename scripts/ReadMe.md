@@ -10,7 +10,8 @@ A collection of Python-based Rhino scripts to improve my day-to-day Rhino experi
 scripts/
 ├── ..
 ├── objects2sublayers.py 
-├── importLayerStructure.py   
+├── importLayerStructure.py
+├── initializeFluo4Rhino.rvb
 └── README.md
 ```
 
@@ -21,6 +22,10 @@ scripts/
 - ### objects2sublayers.py
   A script to divide multiple instances of the same named block into a user-defined number of groups, organizing them into sublayers under a user-specified parent layer. <br>
   This is especially useful for subtly varying materials or colors across groups while maintaining overall block consistency. <br>
+  Tested on Rhino v8 on Windows 11.
+
+- ### initializeFluo4Rhino.rvb
+  Launched at Rhino start up via idle (_options), launches **Fluo_cmd.py** to initialize the Rhino Python Engine. <br>
   Tested on Rhino v8 on Windows 11.
 
 ## Running Scripts
