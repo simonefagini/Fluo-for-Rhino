@@ -1,0 +1,12 @@
+Option Explicit
+
+' Script written by Simone Fagini for Fluo-for-Rhino.
+' Script version June 2025
+
+Call RunPythonScript()
+
+Sub RunPythonScript()
+	Dim strPythonScriptPath
+	strPythonScriptPath = "C:\Users\s.fagini\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\Fluo-for-Rhino (df47bd45-3187-4912-8324-4b2288908bb8)\dev\Fluo_cmd.py"
+	Rhino.Command "_-RunPythonScript """ & strPythonScriptPath & """"
+End Sub
