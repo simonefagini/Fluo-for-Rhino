@@ -9,7 +9,8 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
-├── clickCounter.py
+├── dwg_cmd.py
+├── clickCounter_cmd.py
 ├── Fluo_cmd.py
 ├── count_cmd.py
 ├── unshake_cmd.py
@@ -166,6 +167,10 @@ commands/
 
 - ### clickCounter.py
   Sequential numbering by click. Fast manual enumeration for any workflow. <br>
+   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+
+- ### dwg.py
+  Silently export the document to DWG format in the same location.<br>
    Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
   
   #### List of object types:
