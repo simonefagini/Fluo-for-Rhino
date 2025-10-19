@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── parapet_cmd.py
 ├── dwg_cmd.py
 ├── clickCounter_cmd.py
 ├── Fluo_cmd.py
@@ -172,6 +173,10 @@ commands/
 - ### dwg.py
   Silently export the document to DWG format in the same location.<br>
    Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+
+- ### parapet.py
+  Generates parametric parapet systems with mullions and handrails along guide curves.
+  Tested on Rhino v7 on MacOS 14.
   
   #### List of object types:
    ```
