@@ -179,7 +179,7 @@ commands/
   Generates parametric parapet systems with mullions and handrails along guide curves.
    Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
-  - ### heightDot .py
+- ### heightDot .py
   Sets a quick text dot with insertion point height values, based on z-axis of current cPlane.
   Tested on Rhino v7 on MacOS 14.
   
