@@ -9,6 +9,7 @@ A collection of Python-based Rhino scripts to improve my day-to-day Rhino experi
 ..
 scripts/
 ├── ..
+├── blocksRenamer.py 
 ├── objects2sublayers.py 
 ├── importLayerStructure.py
 ├── initializeFluo4Rhino.rvb
