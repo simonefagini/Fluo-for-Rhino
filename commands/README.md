@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── blocksByLayer_cmd.py
 ├── heightDot_cmd.py
 ├── parapet_cmd.py
 ├── dwg_cmd.py
@@ -167,21 +168,28 @@ commands/
 - ### Fluo_cmd.py
   Just an excuse to initialize the Fluo-for-Rhino pack at every Rhino start-up. Must be idle with a [Visual Basic Rhino Script](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/scripts/initializeFluo4Rhino.rvb). <br>
 
-- ### clickCounter.py
+- ### clickCounter_cmd.py
   Sequential numbering by click. Fast manual enumeration for any workflow. <br>
    Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
-- ### dwg.py
+- ### dwg_cmd.py
   Silently export the document to DWG format in the same location.<br>
    Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
-- ### parapet.py
+- ### parapet_cmd.py
   Generates parametric parapet systems with mullions and handrails along guide curves.
    Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
-- ### heightDot .py
+- ### heightDot_cmd.py
   Sets a quick text dot with insertion point height values, based on z-axis of current cPlane.
   Tested on Rhino v7 on MacOS 14.
+
+- ### blocksByLayer_cmd.py
+  Command to set the properties of the selected objects to "By Layer".
+  Upgraded from the objectsByLayer_cmd.py to recursively include Blocks.
+  Targeted properties: Object Color, Material, Linetype, Print Color, and Print Width.
+  Tested on Rhino v8 on Windows 11.
+
   
   #### List of object types:
    ```
@@ -222,7 +230,7 @@ commands/
 
 
 
- *Latest update on 15 October 2025*                      
+ *Latest update on 10 Febraury 2026*                      
 
 
 ## Useful Links
