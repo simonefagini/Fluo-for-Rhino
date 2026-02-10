@@ -28,6 +28,10 @@ scripts/
   Launched at Rhino start up via idle (_options), launches **Fluo_cmd.py** to initialize the Rhino Python Engine. <br>
   Tested on Rhino v8 on Windows 11.
 
+- ### blocksRenamer.py
+  Batch add prefix to blocks names. <br>
+  Tested on Rhino v8 on Windows 11.
+
 ## Running Scripts
 You can launch the command `EditPythonScript`, open your script.py and then launch it from there.
 Alternatively, if you frequently use the script, you can assign it to an alias to make it faster to load.
