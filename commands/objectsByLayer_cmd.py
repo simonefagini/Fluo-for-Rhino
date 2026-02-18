@@ -17,38 +17,41 @@ __commandname__ = "ObjectsByLayer"
 def objectsByLayer():
   
     objects = rs.GetObjects(preselect=True)
+    if not objects:
+        print("No objects were selected!")
+        return
+        
     counter = 0
-    totObjects =len(objects)
-    
-    if objects:
+    totObjects = len(objects)
+
+    rs.EnableRedraw(False)
+
+    try:
         for obj in objects:
             counter += 1
             if rs.IsObjectValid(obj):
-                
                 print("Object " + str(counter) + "/" + str(totObjects))
-              
-                # Set properties to "By Layer"
                 rs.ObjectColorSource(obj, 0)
                 rs.ObjectMaterialSource(obj, 0)
                 rs.ObjectLinetypeSource(obj, 0)
                 rs.ObjectPrintColorSource(obj, 0)
                 rs.ObjectPrintWidthSource(obj, 0)
 
-    print('Objects properties set byLayer successfully!')
+        print('Objects properties set byLayer successfully!')
+
+    finally:
+        rs.EnableRedraw(True)
+
     return 
 
 def RunCommand(is_interactive):
-
     objectsByLayer()
-
     return 0
 
-
 if __name__ == "__main__":
-     
     try:
         objectsByLayer()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")
