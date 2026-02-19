@@ -99,7 +99,9 @@ def deAxo():
     
 def RunCommand( is_interactive ):
   
+  rs.EnableRedraw(False)
   deAxo()
+  rs.EnableRedraw(True)
   
   return 0
     
@@ -110,4 +112,5 @@ if __name__ == "__main__":
     except ValueError as e:
         print e
     except Exception:
+
         print("Something went wrong...")
