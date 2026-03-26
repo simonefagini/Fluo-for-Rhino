@@ -26,7 +26,15 @@ def toDWG():
         return
     
     base_name = doc_name[:-4]
-    dwg_file = chr(34) + doc_path + base_name + '.dwg' + chr(34)
+
+    # --- USER INPUT ---
+    user_name = rs.StringBox("DWG file name:", base_name)
+    if not user_name:
+        print("Export cancelled.")
+        return
+
+    
+    dwg_file = chr(34) + doc_path + user_name + '.dwg' + chr(34)
     print("Exporting to DWG 2007 Solids...")
     
     settings = " _Version=" + DWG_VERSION + " _SaveSmall=" + SAVE_SMALL + " _GeometryOnly=" + GEOMETRY_ONLY + " _SaveTextures=" + SAVE_TEXTURES + " _SaveNotes=" + SAVE_NOTES + " _SavePlugInData=" + SAVE_PLUGIN_DATA + " "
