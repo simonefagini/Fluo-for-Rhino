@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── countingDot_cmd.py
 ├── blocksByLayer_cmd.py
 ├── heightDot_cmd.py
 ├── parapet_cmd.py
@@ -190,6 +191,9 @@ commands/
   Targeted properties: Object Color, Material, Linetype, Print Color, and Print Width.
   Tested on Rhino v8 on Windows 11.
 
+- ### countingDot_cmd.py
+  Sets a quick text dot set to visually count elements.
+  Tested on Rhino v8 on Windows 11.
   
   #### List of object types:
    ```
