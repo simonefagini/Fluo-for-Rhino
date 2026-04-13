@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── blocksToParentLayer_cmd.py
 ├── countingDot_cmd.py
 ├── blocksByLayer_cmd.py
 ├── heightDot_cmd.py
@@ -193,6 +194,11 @@ commands/
 
 - ### countingDot_cmd.py
   Sets a quick text dot set to visually count elements.
+  Tested on Rhino v8 on Windows 11.
+
+- ### blocksToParentLayer_cmd.py
+  A command to recursively move objects inside selected block instances to the layer of their parent block instance.
+  ⚠️ This command edits block definitions, so all instances of the same definition in the document will be affected! ⚠️
   Tested on Rhino v8 on Windows 11.
   
   #### List of object types:
