@@ -9,6 +9,7 @@ A collection of Python-based Rhino scripts to improve my day-to-day Rhino experi
 ..
 scripts/
 ├── ..
+├── purgeBlockCurves
 ├── blocksRenamer.py 
 ├── objects2sublayers.py 
 ├── importLayerStructure.py
@@ -32,7 +33,11 @@ scripts/
 - ### blocksRenamer.py
   Batch add prefix to blocks names. <br>
   Tested on Rhino v8 on Windows 11.
-
+  
+- ### purgeBlockCurves.py
+  Deletes all curve geometry from selected block definitions (including nested ones) and updates the definitions in place. Skips reference blocks and reports total removed curves.<br>
+  Tested on Rhino v8 on Windows 11.
+  
 ## Running Scripts
 You can launch the command `EditPythonScript`, open your script.py and then launch it from there.
 Alternatively, if you frequently use the script, you can assign it to an alias to make it faster to load.
