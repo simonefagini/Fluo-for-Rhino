@@ -9,7 +9,7 @@ A collection of Python-based Rhino scripts to improve my day-to-day Rhino experi
 ..
 scripts/
 ├── ..
-├── purgeBlockCurves
+├── purgeBlockCurves.py
 ├── blocksRenamer.py 
 ├── objects2sublayers.py 
 ├── importLayerStructure.py
