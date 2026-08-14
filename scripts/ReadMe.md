@@ -9,6 +9,7 @@ A collection of Python-based Rhino scripts to improve my day-to-day Rhino experi
 ..
 scripts/
 ├── ..
+├── randomizeUV.py
 ├── hashBlockNames.py
 ├── purgeBlockCurves.py
 ├── blocksRenamer.py 
@@ -43,6 +44,10 @@ scripts/
   Renames all editable block definitions with randomly generated unique hashes. Skips reference blocks and updates all matching definitions in place. <br>
   Tested on R8 on Windows 11.
 
+- ### randomizeUV.py
+  Randomizes texture mapping on selected Breps using rotation, mirroring, and variable UV scale while leaving the geometry unchanged. <br>
+  Tested on R8 on Windows 11.
+
 ## Running Scripts
 You can launch the command `EditPythonScript`, open your script.py and then launch it from there.
 Alternatively, if you frequently use the script, you can assign it to an alias to make it faster to load.
@@ -58,7 +63,7 @@ Have a look at the [how-to.](https://github.com/simonefagini/Fluo-for-Rhino/blob
 | `urlUpdateAliases_cmd.py`       | :test_tube: Needs Testing  |
 | `objects2sublayers.py`           | 🐞 Debugging  |
 
- *Latest update on 14 April 2025*                      
+ *Latest update on 14 August 2026*                      
 
 
 ## Useful Links
