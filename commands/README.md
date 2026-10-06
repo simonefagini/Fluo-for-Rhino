@@ -37,7 +37,6 @@ commands/
 ├── restoreView_cmd.py
 ├── allPointsOn_cmd.py    
 ├── template_cmd.py
-├── AddingPlugins.md    
 └── README.md
 ```
 
