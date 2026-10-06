@@ -11,7 +11,7 @@ date in place, GPL3.0
 import rhinoscriptsyntax as rs
 #import library
 
-__commandname__ = "Template"
+__commandname__ = "template"
 
 
 def template():

@@ -12,7 +12,7 @@ import rhinoscriptsyntax as rs
 import os
 import urllib2
 
-__commandname__ = "UrlUpdateAliases"
+__commandname__ = "urlUpdateAliases"
 
 
 def UrlUpdateAliases():

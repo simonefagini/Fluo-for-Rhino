@@ -12,7 +12,7 @@ November 2024 in Basel, GPL3.0
 import rhinoscriptsyntax as rs
 import Rhino
 
-__commandname__ = "ObjectsByLayer"
+__commandname__ = "objectsByLayer"
 
 def objectsByLayer():
   

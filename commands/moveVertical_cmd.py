@@ -10,7 +10,7 @@ December 2024 in Basel, GPL3.0
 
 import rhinoscriptsyntax as rs
 
-__commandname__ = "MoveVertical"
+__commandname__ = "moveVertical"
 
 
 def moveVertical():

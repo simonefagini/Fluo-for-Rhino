@@ -12,7 +12,7 @@ December 2024 in Basel, GPL3.0
 
 import rhinoscriptsyntax as rs
 
-__commandname__ = "NamedViewPerspective"
+__commandname__ = "namedViewPerspective"
 
 
 def namedViewPerspective():

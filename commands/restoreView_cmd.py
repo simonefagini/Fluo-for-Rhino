@@ -13,7 +13,7 @@ Dec 2024 in Basel, GPL3.0
 import rhinoscriptsyntax as rs
 from scriptcontext import doc
 
-__commandname__ = "RestoreView"
+__commandname__ = "restoreView"
 
 
 def RestoreView():

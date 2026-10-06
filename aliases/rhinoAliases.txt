@@ -57,7 +57,7 @@ rec '_Rectangle _3Point
 ro ! _Rotate
 ro3 ! _Rotate3d
 rr '_BlockResetScale
-rv '_RestoreView
+rv '_restoreView
 sc '_Scale
 sc1 '_Scale1d
 sc2 '_Scale2d
