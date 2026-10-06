@@ -11,7 +11,7 @@ It can be used to save time typing full commands, to quickly run complex scripts
 
 alias _Command
 a1 '_Command1 _Enter
-al ! _Commnad2 _Pause _Command3
+al ! _Command2 _Pause _Command3
 
 ```
 
@@ -30,19 +30,14 @@ al ! _Commnad2 _Pause _Command3
 ..
 aliases/
 ├── rhinoAliases.txt 
-├── updateAliases.py    
 ├── sortAliases.py         
 └── README.md
 
 ```
 
 - ### rhinoAliases.txt
-  Main .txt file containing custom aliases
-
-- ### updateAliases.py
-  An automation tool written in .py __to offload and then re-import__ all Rhino aliases from a local .txt file. <br>
-  To reduce the struggle of manual updates, `updateAliases.txt` helps offload older versions of the alias list and automatically imports the newest version from a .txt file stored in a shared folder or on a local server. This process makes it easier to keep aliases synchronized on different devices or among members of a team. <br>
-<u>See also:</u> [`/commands/UrlUpdateAliases_cmd.py`](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/UrlUpdateAliases_cmd.py)
+  Main .txt file containing custom aliases <br>
+  <u>See also:</u> [`urlUpdateAliases_cmd.py`](/commands/urlUpdateAliases_cmd.py), a command to offload and re-import all aliases from the latest online version of this file.
 
 - ### sortAliases.py
   Helping tool to __sort aliases alphabetically__.
