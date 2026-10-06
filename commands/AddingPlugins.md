@@ -20,7 +20,7 @@ The first time you run a Python command after starting Rhino, it may take a few 
 
 You can then place all your future `customCommands_cmd.py` files inside of the newly created plug-in folder at: 
 ```plaintext
-C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\CustomPlugin {12345678-abcd-1234-efgh-567890abcdef)\dev\
+C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\CustomPlugin {12345678-abcd-1234-efgh-567890abcdef}\dev\
 ```
 Additionally, you can set up an alias to call the command in the format:
 ```plaintext
