@@ -3,7 +3,7 @@
 A collection of Python commands and scripts for Rhino 8.
 
 ## Install
-Keep this folder's name as it is and place it in your Rhino plug-ins folder, then restart Rhino:
+Place the folder `Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}` in your Rhino plug-ins folder, keeping its name as it is, then restart Rhino:
 
 - Windows: `%APPDATA%\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins\`
 - Mac: `~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/PythonPlugIns/`

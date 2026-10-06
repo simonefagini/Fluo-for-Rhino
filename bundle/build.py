@@ -6,12 +6,12 @@ Builds the Fluo-for-Rhino plugin bundle (Fluo-for-Rhino-vX.Y.Z.zip) from the fil
 Run it with a regular Python 3 from the repository root:  python bundle/build.py [output_folder]
 The version is read from __version__ in commands/Fluo_cmd.py. The zip is written to ./dist by default.
 
-Bundle layout:
-  Fluo-for-Rhino {GUID}/
-    dev/           all commands/*_cmd.py (the folder name Rhino looks for)
-    scripts/       everything in scripts/ except its README
-    CHANGELOG.md
-    README.md      bundle/README.md, with the version filled in
+Zip layout:
+  Fluo-for-Rhino {GUID}/   the plugin folder, the only part that goes into Rhino
+    dev/                   all commands/*_cmd.py (the folder name Rhino looks for)
+    scripts/               everything in scripts/ except its README
+  CHANGELOG.md
+  README.md                bundle/README.md, with the version filled in
 """
 
 import os
@@ -34,18 +34,18 @@ def readVersion():
 
 
 def collectFiles(version):
-    """Returns a list of (path inside the plugin folder, file bytes)."""
+    """Returns a list of (path inside the zip, file bytes)."""
     files = []
 
     commandsDir = os.path.join(ROOT, "commands")
     for name in sorted(os.listdir(commandsDir)):
         if name.endswith("_cmd.py"):
-            files.append(("dev/" + name, open(os.path.join(commandsDir, name), "rb").read()))
+            files.append((PLUGIN_FOLDER + "/dev/" + name, open(os.path.join(commandsDir, name), "rb").read()))
 
     scriptsDir = os.path.join(ROOT, "scripts")
     for name in sorted(os.listdir(scriptsDir)):
         if name != "README.md" and os.path.isfile(os.path.join(scriptsDir, name)):
-            files.append(("scripts/" + name, open(os.path.join(scriptsDir, name), "rb").read()))
+            files.append((PLUGIN_FOLDER + "/scripts/" + name, open(os.path.join(scriptsDir, name), "rb").read()))
 
     files.append(("CHANGELOG.md", open(os.path.join(ROOT, "CHANGELOG.md"), "rb").read()))
 
@@ -65,10 +65,10 @@ def build(outDir):
 
     with zipfile.ZipFile(zipPath, "w", zipfile.ZIP_DEFLATED) as z:
         for path, data in files:
-            z.writestr(PLUGIN_FOLDER + "/" + path, data)
+            z.writestr(path, data)
 
-    commands = len([p for p, _ in files if p.startswith("dev/")])
-    scripts = len([p for p, _ in files if p.startswith("scripts/")])
+    commands = len([p for p, _ in files if "/dev/" in p])
+    scripts = len([p for p, _ in files if "/scripts/" in p])
     print("Built " + zipPath)
     print("  version " + version + ": " + str(commands) + " commands, " + str(scripts) + " scripts")
 
