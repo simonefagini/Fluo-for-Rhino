@@ -1,4 +1,14 @@
 #! python 2
+# -*- coding: utf-8 -*-
+
+"""
+objsBlockstoSelectedLayer.py
+Moves selected objects and block instances to a chosen layer, including the objects inside the blocks' definitions.
+Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
+August 2026 in Basel, GPL3.0
+Vibe coded with GPT-5.6 Sol by OpenAI
+"""
+
 import rhinoscriptsyntax as rs
 import scriptcontext as sc
 import Rhino
