@@ -16,7 +16,7 @@ __commandname__ = "Template"
 
 def template():
       # Main code of command
-      print(f"Running {__commandname__}...")
+      print("Running " + __commandname__ + "...")
       
       return
 
