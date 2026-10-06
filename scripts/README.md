@@ -9,7 +9,9 @@ A collection of Python-based Rhino scripts to improve my day-to-day Rhino experi
 ..
 scripts/
 ├── ..
+├── objsBlockstoSelectedLayer.py
 ├── randomizeUV.py
+├── purgeGroups.py
 ├── hashBlockNames.py
 ├── purgeBlockCurves.py
 ├── blocksRenamer.py 
@@ -33,7 +35,7 @@ scripts/
   Tested on Rhino v8 on Windows 11.
 
 - ### blocksRenamer.py
-  Batch add prefix to blocks names. <br>
+  Adds a user-defined prefix to the names of all block definitions in the document. <br>
   Tested on Rhino v8 on Windows 11.
   
 - ### purgeBlockCurves.py
@@ -44,9 +46,17 @@ scripts/
   Renames all editable block definitions with randomly generated unique hashes. Skips reference blocks and updates all matching definitions in place. <br>
   Tested on R8 on Windows 11.
 
+- ### purgeGroups.py
+  Ungroups all the objects in the file, so no groups are left. <br>
+  Tested on Rhino v8 on Windows 11.
+
 - ### randomizeUV.py
   Randomizes texture mapping on selected Breps using rotation, mirroring, and variable UV scale while leaving the geometry unchanged. <br>
   Tested on R8 on Windows 11.
+
+- ### objsBlockstoSelectedLayer.py
+  Moves selected objects and block instances to a chosen layer, including the objects inside the blocks' definitions. <br>
+  Tested on Rhino v8 on Windows 11.
 
 ## Running Scripts
 You can launch the command `EditPythonScript`, open your script.py and then launch it from there.
@@ -60,7 +70,6 @@ Have a look at the [how-to.](https://github.com/simonefagini/Fluo-for-Rhino/blob
 | Command Name                    | Status                       |
 | ------------------------------- | ---------------------------- |
 | `layerMatchProperties.py`           | :test_tube: Needs Testing  |
-| `urlUpdateAliases_cmd.py`       | :test_tube: Needs Testing  |
 | `objects2sublayers.py`           | 🐞 Debugging  |
 
  *Latest update on 14 August 2026*                      
