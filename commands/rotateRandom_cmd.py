@@ -3,7 +3,7 @@
 
 """
 rotateRandom_cmd.py
-A command to randomly rotate selected objects individually around their own center points.
+A command to randomly rotate selected objects individually around their own center points, on the axes and up to the maximum angle you choose.
 Adds a touch of chaos and variation.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 April 2025 in Basle, GPL3.0

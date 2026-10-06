@@ -3,9 +3,9 @@
 
 """
 shake_cmd.py
-A command to randomly rotate selected objects individually around their own center points.
+A command to randomly move selected objects individually, by an offset of up to a set amplitude on X, Y and Z.
 Adds a touch of chaos and variation.
-Rotation data is stored in each object's attributes for easy reversibility using unshake_cmd.py.
+The offset is stored in each object's attributes for easy reversibility using unshake_cmd.py.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 April 2025 in Basle, GPL3.0
 """

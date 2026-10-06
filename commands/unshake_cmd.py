@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-shake_cmd.py
+unshake_cmd.py
 A command to reset previously shaken objects.
 Only restores translation vectors applied with the shake_cmd.py command.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
