@@ -12,6 +12,7 @@ import rhinoscriptsyntax as rs
 #import library
 
 __commandname__ = "Fluo"
+__version__ = "1.0.0"
 
 
 def Fluo():
@@ -20,7 +21,7 @@ def Fluo():
       print("Initializing Fluo-for-Rhino...")
       time.sleep(2)
       
-      print("Fluo-for-Rhino v.01")
+      print("Fluo-for-Rhino v" + __version__)
       
       return
 
