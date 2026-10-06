@@ -56,7 +56,7 @@ To add the full bundle to your Mac OS environment, place the unzipped folder in:
 💡 **NOTE**: If you already have an older bundle version, replace the existing folder with the new one.
 
 ### Creating a new bundle
-If you want to make your own plug-in or bundle of commands, follow the steps in the short [guide](/commands/AddingPlugins.md).
+If you want to make your own plug-in or bundle of commands, follow the steps in the official [guide](https://developer.rhino3d.com/en/guides/rhinopython/7/creating-rhino-commands-using-python/).
 
 
 ## Useful Links
