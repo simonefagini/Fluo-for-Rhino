@@ -69,7 +69,6 @@ sl '_SelLast
 sr '_PlanarSrf
 ss _-SelBlockInstanceNamed _SelectBlockToMatch
 t '_CPlane _World _Top
-test ! _-RunPythonScript "/Users/simone/Desktop/test.py"
 tr '_Trim
 tt _Top
 u '_Undo
