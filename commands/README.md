@@ -21,7 +21,7 @@ commands/
 ├── unshake_cmd.py
 ├── shake_cmd.py
 ├── rotateRandom_cmd.py
-├── pointPaste_cmd.py
+├── pastePoint_cmd.py
 ├── whichMaterial_cmd.py
 ├── copyVertical_cmd.py
 ├── deaxo_cmd.py
@@ -32,7 +32,7 @@ commands/
 ├── moveVertical_cmd.py
 ├── namedViewPerspective_cmd.py
 ├── urlUpdateAliases_cmd.py
-├── obejctsByLayer_cmd.py
+├── objectsByLayer_cmd.py
 ├── restoreView_cmd.py
 ├── allPointsOn_cmd.py    
 ├── template_cmd.py
@@ -78,7 +78,7 @@ commands/
   It does not support the preselection of Brep faces. :warning:<br>
   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
-- ### centerOsnapToggle_cmd.py
+- ### centerOsnap_cmd.py
     A command to toggle the **Center** object snap on and off in Rhino. <br>
     This provides a quick way to enable or disable snapping to the center of circles and arcs during modeling.
 
