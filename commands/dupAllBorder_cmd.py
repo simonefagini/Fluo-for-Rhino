@@ -52,7 +52,7 @@ def RunCommand( is_interactive ):
     try:
         dupAllBorder()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")
     
@@ -64,6 +64,6 @@ if __name__ == "__main__":
     try:
         dupAllBorder()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")

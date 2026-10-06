@@ -66,6 +66,6 @@ if __name__ == "__main__":
     try:
         unshake()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")

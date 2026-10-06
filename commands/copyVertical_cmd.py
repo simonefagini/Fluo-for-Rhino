@@ -38,6 +38,6 @@ if __name__ == "__main__":
     try:
         copyVertical()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")
