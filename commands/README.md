@@ -9,6 +9,7 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 ..
 commands/
 ├── ..
+├── tagDot_cmd.py
 ├── blocksToParentLayer_cmd.py
 ├── countingDot_cmd.py
 ├── blocksByLayer_cmd.py
@@ -225,8 +226,13 @@ commands/
    ```
 
   Tested on Rhino v8 on Windows 11.
-  
- 
+
+- ### tagDot_cmd.py
+  A command to place a single text dot at a picked point, using a tag you type in. <br>
+  Designed for quick annotation and marking, without repetition or counting. <br>
+  Tested on Rhino v8 on Windows 11.
+
+
 ## Work in Progress
 
 | Command Name                    | Status                       |
