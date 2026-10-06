@@ -148,19 +148,19 @@ commands/
   Assign to use with the Ctrl+Shift+V. <br>
   Tested on Rhino v8 on Windows 11.
 
-- ### pastePoint_cmd.py
-  A command to randomly rotate selected objects individually around their own center points. <br>
+- ### rotateRandom_cmd.py
+  A command to randomly rotate selected objects individually around their own center points, on the axes and up to the maximum angle you choose. <br>
   Adds a touch of chaos and variation. <br>
   Tested on Rhino v8 on Windows 11.
   
 - ### shake_cmd.py
-  A command to randomly rotate selected objects individually around their own center points. <br>
+  A command to randomly move selected objects individually, by an offset of up to a set amplitude on X, Y and Z. <br>
   Adds a touch of chaos and variation. <br>
-  Rotation data is stored in each object's attributes for easy reversibility using 'unshake_cmd.py'. <br>
+  The offset is stored in each object's attributes for easy reversibility using 'unshake_cmd.py'. <br>
   Tested on Rhino v8 on Windows 11.
 
 - ### unshake_cmd.py
-  A command to restore objects affected by 'shake_cmd.py' to their original orientation, using the stored rotation data in their attributes. <br>
+  A command to restore objects affected by 'shake_cmd.py' to their original position, using the stored translation data in their attributes. <br>
   Tested on Rhino v8 on Windows 11.
 
 - ### count_cmd.py
