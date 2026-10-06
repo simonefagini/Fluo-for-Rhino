@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#! python 2
 # -*- coding: utf-8 -*-
 """
 parapet_cmd.py

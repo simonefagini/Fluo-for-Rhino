@@ -60,7 +60,7 @@ commands/
   
 - ### urlUpdateAliases_cmd.py
   A quick way to offload and then re-import all Rhino aliases from the latest version of [rhinoAliases.txt](/aliases/rhinoAliases.txt).<br>
-  Requires IronPython 3 (urllib2). :warning:<br>
+  Requires IronPython 2.7 (urllib2). :warning:<br>
   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
 - ### namedViewPerspective_cmd.py
