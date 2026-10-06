@@ -54,6 +54,6 @@ if __name__ == "__main__":
     try:
         UrlUpdateAliases()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")

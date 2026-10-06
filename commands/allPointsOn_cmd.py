@@ -36,7 +36,7 @@ def RunCommand( is_interactive ):
     try:
         PointsOn()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")
     
@@ -48,6 +48,6 @@ if __name__ == "__main__":
     try:
         PointsOn()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")

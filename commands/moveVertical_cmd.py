@@ -37,6 +37,6 @@ if __name__ == "__main__":
     try:
         moveVertical()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")

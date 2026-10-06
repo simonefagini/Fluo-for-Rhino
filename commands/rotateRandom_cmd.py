@@ -139,6 +139,6 @@ if __name__ == "__main__":
     try:
         rotateRandom()
     except ValueError as e:
-        print e
+        print(e)
     except Exception:
         print("Something went wrong...")
