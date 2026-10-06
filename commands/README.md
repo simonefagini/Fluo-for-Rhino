@@ -37,7 +37,6 @@ commands/
 ├── restoreView_cmd.py
 ├── allPointsOn_cmd.py    
 ├── template_cmd.py
-├── AddingPlugins.md    
 └── README.md
 ```
 
@@ -166,6 +165,30 @@ commands/
 
 - ### count_cmd.py
   A simple command to count selected objects and return a summary of their types and quantities. <br>
+  
+  #### List of object types:
+   ```
+    0           Unknown object
+    1           Point
+    2           Point cloud
+    4           Curve
+    8           Surface or single-face brep
+    16          Polysurface or multiple-face
+    32          Mesh
+    256         Light
+    512         Annotation
+    4096        Instance or block reference
+    8192        Text dot object
+    16384       Grip object
+    32768       Detail
+    65536       Hatch
+    131072      Morph control
+    134217728   Cage
+    268435456   Phantom
+    536870912   Clipping plane
+    1073741824  Extrusion
+   ```
+
   Tested on Rhino v8 on Windows 11.
 
 - ### Fluo_cmd.py
@@ -200,31 +223,6 @@ commands/
 - ### blocksToParentLayer_cmd.py
   A command to recursively move objects inside selected block instances to the layer of their parent block instance.
   ⚠️ This command edits block definitions, so all instances of the same definition in the document will be affected! ⚠️
-  Tested on Rhino v8 on Windows 11.
-  
-  #### List of object types:
-   ```
-    0           Unknown object
-    1           Point
-    2           Point cloud
-    4           Curve
-    8           Surface or single-face brep
-    16          Polysurface or multiple-face
-    32          Mesh
-    256         Light
-    512         Annotation
-    4096        Instance or block reference
-    8192        Text dot object
-    16384       Grip object
-    32768       Detail
-    65536       Hatch
-    131072      Morph control
-    134217728   Cage
-    268435456   Phantom
-    536870912   Clipping plane
-    1073741824  Extrusion
-   ```
-
   Tested on Rhino v8 on Windows 11.
 
 - ### tagDot_cmd.py
