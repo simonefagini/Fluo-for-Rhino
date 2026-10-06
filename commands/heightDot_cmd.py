@@ -32,7 +32,7 @@ def systemUnit(unitValue):
 
 def heightDot():
 	# Main code of command
-	print(f"Running {__commandname__}...")
+	print("Running " + __commandname__ + "...")
 	
 	c_plane = rs.GetPoint("Pick origin or press Enter/Escape for 0,0,0:")
 	if not c_plane:
