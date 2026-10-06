@@ -9,7 +9,7 @@ October 2025, on a SBB Train, somewhere in Switzerland. GPL3.0
 import rhinoscriptsyntax as rs
 from System.Drawing import Color
 
-__commandname__ = "Parapet"
+__commandname__ = "parapet"
 
 def parapet_pointPosition(curveLength, minDist):
     pointList = []

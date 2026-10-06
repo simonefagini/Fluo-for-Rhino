@@ -10,7 +10,7 @@ Dec 2024 in Basel, GPL3.0
 
 import rhinoscriptsyntax as rs
 
-__commandname__ = "AllPointsOn"
+__commandname__ = "allPointsOn"
 
 
 def PointsOn():
