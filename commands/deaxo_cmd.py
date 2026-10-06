@@ -15,7 +15,7 @@ import rhinoscriptsyntax as rs
 import scriptcontext as sc
 import Rhino
 
-__commandname__ = "axo"
+__commandname__ = "deaxo"
 
 
 def isAxo():
