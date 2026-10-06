@@ -11,6 +11,7 @@
 Fluo-for-Rhino/
   ├── aliases/
   ├── assets/
+  ├── bundle/
   ├── commands/
   ├── scripts/
   ├── LICENSE
@@ -22,6 +23,9 @@ Fluo-for-Rhino/
 
 - ### assets
   Images used in the guides and READMEs, plus the source file for the toolbar icons.
+
+- ### bundle
+  The README and the build script (`python bundle/build.py`) for the plugin bundle attached to each release.
 
 - ### commands
   A collection of Python-based Rhino commands designed to enhance functionality and provide useful tools for an improved Rhino experience.
