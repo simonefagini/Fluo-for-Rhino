@@ -1,3 +1,4 @@
+#! python 2
 import rhinoscriptsyntax as rs
 
 def ungroupAll():
