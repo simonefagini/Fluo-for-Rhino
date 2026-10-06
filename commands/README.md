@@ -112,7 +112,7 @@ commands/
   Data is preserved as object attributes for an undestructive workflow,  with full block compatibility.<br>
   The 'deaxo' command reverts objects to their original condition.<br>
 
-  ![](/.assets/AttributeAxoCommand.png)
+  ![](/assets/AttributeAxoCommand.png)
 
    This command was inspired and made possible by this [old pdf](https://www.epfl.ch/schools/enac/atelier-maquettes/wp-content/uploads/2023/08/Creating-an-Axonometric-View-in-Rhino-1.pdf) from *EPFL Lausanne*.<br>
    If you prefer the **macro**, you can copy/paste from below.<br>

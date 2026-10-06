@@ -7,11 +7,11 @@ If you want to make your own plug-in or bundle of commands, follow the steps bel
 2. Click **File > New**
 3. Insert a name for the command and a name for the plug-in (first time only)
    
-   ![](/.assets/RhinoEditPythonScriptNewCommand.png)
+   ![](/assets/RhinoEditPythonScriptNewCommand.png)
 
 5. Clear the sample code and paste your own code, for instance [`template_cmd.py`](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/commands/template_cmd.py)
 
-   ![](/.assets/EditPythonScriptSampleCode.png)
+   ![](/assets/EditPythonScriptSampleCode.png)
 
 6. Save
 7. Relaunch Rhino
