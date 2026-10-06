@@ -72,8 +72,6 @@ Have a look at the [how-to.](https://github.com/simonefagini/Fluo-for-Rhino/blob
 | `layerMatchProperties.py`           | :test_tube: Needs Testing  |
 | `objects2sublayers.py`           | 🐞 Debugging  |
 
- *Latest update on 14 August 2026*                      
-
 
 ## Useful Links
 - [How to Use Scripts and Plugins](https://www.rhino3d.com/docs/guides/scripts-plugins/how-to-use/)  -  How to use scripts and plugin in Rhino

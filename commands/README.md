@@ -244,11 +244,6 @@ commands/
 | `batchSwitchLayersMaterials_cmd.py`           | :bulb: Planned  |
 
 
-
-
- *Latest update on 10 Febraury 2026*                      
-
-
 ## Useful Links
 - [Creating Rhino Commands Using Python](https://developer.rhino3d.com/en/guides/rhinopython/7/creating-rhino-commands-using-python/)  -  Rhino Developers official guide on how to create Rhino commands from Python scripts
 - [How to Use Scripts and Plugins](https://www.rhino3d.com/docs/guides/scripts-plugins/how-to-use/)  -  How to use scripts and plugin in Rhino
