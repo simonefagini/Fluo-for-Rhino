@@ -77,7 +77,7 @@ u '_Undo
 un '_Unlock
 uv '_UndoView
 v '_moveVertical
-vr '_vrayShowVFB
+vr '_vrayShowVFB _Enter
 vv '_Volume _Units e
 x '_Explode
 xl '_AddGuide
