@@ -54,6 +54,7 @@ pu '-Purge Enter
 rb '_ReplaceBlock
 rd '_Render
 rec '_Rectangle _3Point
+rf '_rotateReference
 ro ! _Rotate
 ro3 ! _Rotate3d
 rr '_BlockResetScale
@@ -69,6 +70,7 @@ sl '_SelLast
 sr '_PlanarSrf
 ss _-SelBlockInstanceNamed _SelectBlockToMatch
 t '_CPlane _World _Top
+tc '_toggleClip
 tr '_Trim
 tt _Top
 u '_Undo
