@@ -12,6 +12,7 @@ commands/
 ├── tagDot_cmd.py
 ├── rotateReference_cmd.py
 ├── toggleClip_cmd.py
+├── temp_cmd.py
 ├── blocksToParentLayer_cmd.py
 ├── countingDot_cmd.py
 ├── blocksByLayer_cmd.py
@@ -241,6 +242,11 @@ commands/
   Pick clipping planes, use the Name option (wildcards allowed, e.g. `Sec_*`) to reach hidden ones, or press Enter to act on all of them. <br>
   If any target plane already clips the active viewport, all targets are disabled there; otherwise all are enabled.
 
+
+- ### temp_cmd.py
+  A command to run a Python script you are working on, without browsing for it every time. <br>
+  Pick the script once with the `Set` option, then press Enter to run its latest saved version. <br>
+  It runs through `RunPythonScript`, so the script keeps its own engine: Python 3 scripts work too. The path is remembered until Rhino is closed.
 
 ## Work in Progress
 
