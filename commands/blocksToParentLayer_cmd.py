@@ -9,7 +9,7 @@ Nested block instances pass their own instance layer to their contents.
 This command edits block definitions, so all instances of the same definition
 in the document may be affected.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
-Vibe coded with ChatGPT
+Vibe coded with ChatGPT by OpenAI
 February 2026 in Basel, GPL3.0
 """
 
