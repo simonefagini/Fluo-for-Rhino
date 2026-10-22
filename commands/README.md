@@ -10,6 +10,8 @@ A collection of Python-based Rhino commands designed to enhance functionality an
 commands/
 ├── ..
 ├── tagDot_cmd.py
+├── rotateReference_cmd.py
+├── toggleClip_cmd.py
 ├── blocksToParentLayer_cmd.py
 ├── countingDot_cmd.py
 ├── blocksByLayer_cmd.py
@@ -229,6 +231,15 @@ commands/
   A command to place a single text dot at a picked point, using a tag you type in. <br>
   Designed for quick annotation and marking, without repetition or counting. <br>
   Tested on Rhino v8 on Windows 11.
+
+- ### rotateReference_cmd.py
+  A command to rotate objects by a reference angle: pick a line for the current direction and a line for the new direction, and the objects turn by the angle between the two, around the center you pick. <br>
+  Rotation happens in the active construction plane.
+
+- ### toggleClip_cmd.py
+  A command to enable or disable clipping planes in the active viewport only, leaving every other view untouched. <br>
+  Pick clipping planes, use the Name option (wildcards allowed, e.g. `Sec_*`) to reach hidden ones, or press Enter to act on all of them. <br>
+  If any target plane already clips the active viewport, all targets are disabled there; otherwise all are enabled.
 
 
 ## Work in Progress
