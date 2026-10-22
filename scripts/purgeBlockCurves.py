@@ -7,7 +7,7 @@ Deletes all curve geometry from selected block definitions (including nested one
 and updates the definitions in place. Skips reference blocks and reports total removed curves.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 April 2026 in Basel, GPL3.0
-Assisted by ChatGPT
+Vibe coded with ChatGPT by OpenAI
 """
 
 import rhinoscriptsyntax as rs

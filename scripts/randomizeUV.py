@@ -7,7 +7,7 @@ Randomizes texture mapping on selected Breps using rotation, mirroring,
 and variable UV scale while leaving the geometry unchanged.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 August 2026 in Basel, GPL3.0
-Vibe coded with ChatGPT — GPT-5.6 Sol by OpenAI
+Vibe coded with GPT-5.6 Sol by OpenAI
 """
 
 import Rhino

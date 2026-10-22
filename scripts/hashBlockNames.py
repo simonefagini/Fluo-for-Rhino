@@ -7,7 +7,7 @@ Renames all editable block definitions with randomly generated unique hashes.
 Skips reference blocks and updates all matching definitions in place.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 April 2026 in Basel, GPL3.0
-Assisted by ChatGPT
+Vibe coded with ChatGPT by OpenAI
 """
 
 import rhinoscriptsyntax as rs
