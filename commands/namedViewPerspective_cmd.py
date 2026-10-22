@@ -5,6 +5,7 @@
 namedViewPerspective_cmd.py
 A command to temporarily switch the current view to a Perspective view, 
 making it easier to orbit and navigate for an improved modeling experience.
+The viewport keeps its current display mode.
 Use the restoreView (rv) command to return to the previous Named View state.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 December 2024 in Basel, GPL3.0
@@ -18,7 +19,9 @@ __commandname__ = "namedViewPerspective"
 def namedViewPerspective():
     viewID = rs.CurrentView( return_name=False )
     viewName = rs.ViewTitle(viewID)
-    rs.Command("'_SetView _World _Perspective _SetDisplayMode _Shaded")
+    displayMode = rs.ViewDisplayMode(viewID)
+    rs.Command("'_SetView _World _Perspective")
+    rs.ViewDisplayMode(viewID, displayMode)
     
     rs.RenameView( viewID, viewName )
     print(viewName + " set to Perspective mode.")
