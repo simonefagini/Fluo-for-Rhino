@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 
 """
-temp_cmd.py
+tempScript_cmd.py
 A command to run a Python script you are working on, without browsing for it every time.
 Pick the script once with the Set option, then press Enter to run its latest saved version.
 The script runs through RunPythonScript, so it keeps its own engine: Python 3 scripts work too.
 The path is remembered until Rhino is closed.
+The alias temp runs it with no prompt: temp '_tempScript _Enter
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 October 2026 in Basel, GPL3.0
 """
@@ -17,9 +18,9 @@ import scriptcontext as sc
 from Rhino.Input import GetResult
 from Rhino.Input.Custom import GetOption
 
-__commandname__ = "temp"
+__commandname__ = "tempScript"
 
-STICKY_KEY = "temp_script"
+STICKY_KEY = "tempScript_path"
 
 
 def pickScript():

@@ -71,6 +71,7 @@ sr '_PlanarSrf
 ss _-SelBlockInstanceNamed _SelectBlockToMatch
 t '_CPlane _World _Top
 tc '_toggleClip
+temp '_tempScript _Enter
 tr '_Trim
 tt _Top
 u '_Undo
