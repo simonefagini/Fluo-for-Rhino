@@ -23,12 +23,12 @@ scripts/
 
 - ### importLayerStructure.py
   A simple script to import the layer structure (name, childs, color, visible, locked) from one Rhino file to the active one. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### objects2sublayers.py
   A script to divide multiple instances of the same named block into a user-defined number of groups, organizing them into sublayers under a user-specified parent layer. <br>
   This is especially useful for subtly varying materials or colors across groups while maintaining overall block consistency. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### initializeFluo4Rhino.rvb
   Launched at Rhino start up via idle (_options), launches **Fluo_cmd.py** to initialize the Rhino Python Engine. <br>
@@ -36,27 +36,27 @@ scripts/
 
 - ### blocksRenamer.py
   Adds a user-defined prefix to the names of all block definitions in the document. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
   
 - ### purgeBlockCurves.py
   Deletes all curve geometry from selected block definitions (including nested ones) and updates the definitions in place. Skips reference blocks and reports total removed curves.<br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### hashBlockNames.py
   Renames all editable block definitions with randomly generated unique hashes. Skips reference blocks and updates all matching definitions in place. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### purgeGroups.py
   Ungroups all the objects in the file, so no groups are left. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### randomizeUV.py
   Randomizes texture mapping on selected Breps using rotation, mirroring, and variable UV scale while leaving the geometry unchanged. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### objsBlockstoSelectedLayer.py
   Moves selected objects and block instances to a chosen layer, including the objects inside the blocks' definitions. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 ## Running Scripts
 You can launch the command `EditPythonScript`, open your script.py and then launch it from there.

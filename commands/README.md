@@ -48,38 +48,38 @@ commands/
 
 - ### allPointsOn_cmd.py
   A custom Rhino command to merge the functionality of **_PointsOn** and **_SolidPtOn**.<br>
-  Tested on Rhino v7 on MacOS 14.2.1 and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### restoreView_cmd.py
   A command to restore the named view tied to the active viewport by sharing the same name.
   Ideal for reverting to a saved state after temporarily modifying a view while working on the model.
   If the active viewport is a default view, the command takes no action.<br>
-  Tested on Rhino v7 on MacOS 14.2.1 and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### objectsByLayer_cmd.py
   A command to set the properties of the selected object to "By Layer".<br>
   Targeted properties: Object Color, Material, Linetype, Print Color, and Print Width.<br>
-  Tested on Rhino v7 on MacOS 14.2.1 and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
   
 - ### urlUpdateAliases_cmd.py
   A quick way to offload and then re-import all Rhino aliases from the latest version of [rhinoAliases.txt](/aliases/rhinoAliases.txt).<br>
   Requires IronPython 2.7 (urllib2). :warning:<br>
-  Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### namedViewPerspective_cmd.py
   A command to temporarily switch the current view to a Perspective view, making it easier to orbit and navigate for an improved modeling experience.
   Use the [restoreView (rv)](/commands/restoreView_cmd.py) command to return to the previous Named View state. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### moveVertical_cmd.py
   A command to improve the Move Vertical workflow by preventing Project snap interference when executing the command. <br>
   The intended workflow starts with a selected object. <br>
-  Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### dupAllBorder_cmd.py
   A custom Rhino command to merge the functionality of 'DupBorder and 'DupFaceBorder. <br>
   It does not support the preselection of Brep faces. :warning:<br>
-  Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### centerOsnap_cmd.py
     A command to toggle the **Center** object snap on and off in Rhino. <br>
@@ -103,11 +103,11 @@ commands/
    0x200000    Tangent (or 2097152)  
    0x8000000   Point (or 8388608)
    ```
-   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+   Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### keep_cmd.py
   A command to randomly keep a user-defined percentage of pre-selected objects in Rhino, useful for quick decimation and random sampling.<br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.<br>
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.<br>
 
 - ### axo_cmd.py
   Python script for Rhino that deforms selected objects into axonometric projections based on customizable rotation angles.<br>
@@ -122,7 +122,7 @@ commands/
    ```plaintext
    ! _Select _Pause _SetActiveViewport Top _Rotate 0 30 _SetActiveViewport Right _Shear w0 w0,0,1 -45       _SetActiveViewport Top _Zoom _All _Extents
    ```
-   Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.<br>
+   Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.<br>
 
 - ### deaxo_cmd.py
   Companion command to revert axonometrically projected objects back to their original condition with a single click.<br>
@@ -135,36 +135,36 @@ commands/
    ! _Select _Pause _Right _SetActiveViewport Right _Shear w0 w0,0,1 +45 _Top _SetActiveViewport Top _Rotate 0 -30       _Perspective _SetActiveViewport Perspective _Zoom _All _Extents
 
    ```
-   Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.<br>
+   Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.<br>
 
 - ### copyVertical_cmd.py
   A command to improve the Copy Vertical workflow by preventing Project snap interference when executing the command. <br>
   The intended workflow starts with a selected object. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
   
 - ### whichMaterial_cmd.py
   A command to check which material is applied to a selected object, or to the objects within a selected block, and return the material name for quick and easy identification.<br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### pastePoint_cmd.py
   A command to paste clipboard content at a picked point in Rhino, bypassing the default behavior of pasting to original coordinates. <br>
   Assign to use with the Ctrl+Shift+V. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### rotateRandom_cmd.py
   A command to randomly rotate selected objects individually around their own center points, on the axes and up to the maximum angle you choose. <br>
   Adds a touch of chaos and variation. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
   
 - ### shake_cmd.py
   A command to randomly move selected objects individually, by an offset of up to a set amplitude on X, Y and Z. <br>
   Adds a touch of chaos and variation. <br>
   The offset is stored in each object's attributes for easy reversibility using 'unshake_cmd.py'. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### unshake_cmd.py
   A command to restore objects affected by 'shake_cmd.py' to their original position, using the stored translation data in their attributes. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### count_cmd.py
   A simple command to count selected objects and return a summary of their types and quantities. <br>
@@ -192,58 +192,58 @@ commands/
     1073741824  Extrusion
    ```
 
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### Fluo_cmd.py
   Just an excuse to initialize the Fluo-for-Rhino pack at every Rhino start-up. Must be idle with a [Visual Basic Rhino Script](https://github.com/simonefagini/Fluo-for-Rhino/blob/main/scripts/initializeFluo4Rhino.rvb). <br>
 
 - ### clickCounter_cmd.py
   Sequential numbering by click. Fast manual enumeration for any workflow. <br>
-   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+   Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### dwg_cmd.py
   Silently export the document to DWG format in the same location.<br>
-   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+   Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### parapet_cmd.py
   Generates parametric parapet systems with mullions and handrails along guide curves.
-   Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
+   Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### heightDot_cmd.py
   Sets a quick text dot with insertion point height values, based on z-axis of current cPlane. <br>
   Use the `Unit` option while picking to choose mm, cm, m or the document unit (default: m, remembered during the session).
-  Tested on Rhino v7 on MacOS 14.
+  Tested on Rhino v7 on MacOS 14.2.
 
 - ### blocksByLayer_cmd.py
   Command to set the properties of the selected objects to "By Layer".
   Upgraded from the objectsByLayer_cmd.py to recursively include Blocks.
   Targeted properties: Object Color, Material, Linetype, Print Color, and Print Width.
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### countingDot_cmd.py
   Sets a quick text dot set to visually count elements.
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### blocksToParentLayer_cmd.py
   A command to recursively move objects inside selected block instances to the layer of their parent block instance.
   ⚠️ This command edits block definitions, so all instances of the same definition in the document will be affected! ⚠️
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### tagDot_cmd.py
   A command to place a single text dot at a picked point, using a tag you type in. <br>
   Designed for quick annotation and marking, without repetition or counting. <br>
-  Tested on Rhino v7 on MacOS and Rhino v8 on Windows 11.
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### rotateReference_cmd.py
   A command to rotate objects by a reference angle: pick a line for the current direction and a line for the new direction, and the objects turn by the angle between the two, around the center you pick. <br>
   Rotation happens in the active construction plane. <br>
-  Tested on Rhino v7 on MacOS.
+  Tested on Rhino v7 on MacOS 14.2.
 
 - ### toggleClip_cmd.py
   A command to enable or disable clipping planes in the active viewport only, leaving every other view untouched. <br>
   Pick clipping planes, use the Name option (wildcards allowed, e.g. `Sec_*`) to reach hidden ones, or press Enter to act on all of them. <br>
   If any target plane already clips the active viewport, all targets are disabled there; otherwise all are enabled. <br>
-  Tested on Rhino v7 on MacOS.
+  Tested on Rhino v7 on MacOS 14.2.
 
 
 - ### tempScript_cmd.py
@@ -251,7 +251,7 @@ commands/
   Pick the script once with the `Set` option, then press Enter to run its latest saved version. <br>
   It runs through `RunPythonScript`, so the script keeps its own engine: Python 3 scripts work too. The path is remembered until Rhino is closed. <br>
   The alias `temp` (`_tempScript _Enter`) runs the saved script straight away. <br>
-  Tested on Rhino v7 on MacOS.
+  Tested on Rhino v7 on MacOS 14.2.
 
 ## Work in Progress
 

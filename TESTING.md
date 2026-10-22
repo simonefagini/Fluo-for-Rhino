@@ -3,7 +3,7 @@
 What has been checked, and what is still open. Updated by hand after each test session.
 
 ## Checked
-- **Rhino 7, MacOS:** all commands and scripts, including everything new in v1.1.0.
+- **Rhino 7, MacOS 14.2:** all commands and scripts, including everything new in v1.1.0.
 - **Rhino 8, Windows 11:** everything up to v1.0.0.
 
 ## Still to check on Rhino 8, Windows 11
@@ -20,9 +20,8 @@ New or changed since v1.0.0:
 - [ ] `blocksToParentLayer`: object with a custom per-object color; look for "Could not move object" messages.
 - [ ] `urlUpdateAliases`: new aliases `rf`, `tc`, `temp` arrive and `vr` ends with `_Enter`.
 
-Install and release:
+Install:
 - [ ] Install the v1.1.0 zip on Windows: folder `Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}` placed in `...\Rhinoceros\8.0\Plug-ins\PythonPlugins\`, Rhino restarted, version printed at start-up.
-- [ ] `initializeFluo4Rhino.rvb` real run (it builds the path from `%APPDATA%`, never run in Rhino yet).
 
 ## Optional: Rhino 8, MacOS
 - [ ] Install from the zip into `.../Rhinoceros/8.0/Plug-ins/PythonPlugIns/` and run a few commands.
