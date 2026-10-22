@@ -209,7 +209,8 @@ commands/
    Tested on Rhino v7 on MacOS 14 and Rhino v8 on Windows 11.
 
 - ### heightDot_cmd.py
-  Sets a quick text dot with insertion point height values, based on z-axis of current cPlane.
+  Sets a quick text dot with insertion point height values, based on z-axis of current cPlane. <br>
+  Use the `Unit` option while picking to choose mm, cm, m or the document unit (default: m, remembered during the session).
   Tested on Rhino v7 on MacOS 14.
 
 - ### blocksByLayer_cmd.py
