@@ -16,6 +16,7 @@ Fluo-for-Rhino/
   ├── scripts/
   ├── toolbar/
   ├── CHANGELOG.md
+  ├── TESTING.md
   ├── LICENSE
   └── README.md
 ```
@@ -40,6 +41,9 @@ Fluo-for-Rhino/
 
 - ### CHANGELOG.md
   What changed in each release.
+
+- ### TESTING.md
+  What has been tested on which Rhino version, and what is still open.
 
 ## Adding Fluo-for-Rhino
 **Fluo-for-Rhino** is also available as a ready-to-use Rhino plugin that bundles all the custom commands from this repository.

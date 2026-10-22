@@ -1,6 +1,6 @@
 # Changelog
 
-## [1.0.1] - 2026-10-22
+## [1.1.0] - 2026-10-22
 
 ### Added
 - `tempScript` command: pick a Python script once with the `Set` option, then press Enter to run its latest saved version. It runs through `RunPythonScript`, so Python 3 scripts work too on Rhino 8. The path is remembered until Rhino is closed. The alias `temp` runs it straight away.

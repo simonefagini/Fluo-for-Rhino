@@ -12,7 +12,7 @@ import rhinoscriptsyntax as rs
 #import library
 
 __commandname__ = "Fluo"
-__version__ = "1.0.1"
+__version__ = "1.1.0"
 
 
 def Fluo():
