@@ -46,7 +46,6 @@ def shake():
     random.shuffle(ids)
     
     maxAmplitudes = getMaxs()
-    print(maxAmplitudes)
     
     
     for id in ids:
