@@ -67,6 +67,7 @@ GROUPS = [
     ]),
     ("Setup", "#9CA3AF", [
         ("urlUpdateAliases", None),
+        ("tempScript", None),
     ]),
 ]
 
