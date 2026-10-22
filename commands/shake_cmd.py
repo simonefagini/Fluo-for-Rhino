@@ -46,6 +46,8 @@ def shake():
     random.shuffle(ids)
     
     maxAmplitudes = getMaxs()
+    if maxAmplitudes is None:  # User canceled
+        return
     
     
     for id in ids:

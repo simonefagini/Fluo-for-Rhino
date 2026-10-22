@@ -36,6 +36,8 @@ def getRotationAxis():
     isZTrue = False
 
     axis = rs.MultiListBox(worldAxis, "Axis: (multiple choice)")
+    if axis is None:  # User canceled
+        return None
 
     for xyz in axis:
         if str(xyz) == "x":
@@ -100,7 +102,9 @@ def rotateRandom():
         else:
             centerPoints.append(rs.BlockInstanceInsertPoint(id))
     
-    maxRotation = (getAngles(getRotationAxis()))
+    maxRotation = getAngles(getRotationAxis())
+    if maxRotation is None:  # User canceled
+        return
     
     
     
