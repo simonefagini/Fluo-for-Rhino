@@ -22,22 +22,26 @@ __commandname__ = "blocksToParentLayer"
 def move_object_to_layer(rh_obj, layer_index):
     attr = rh_obj.Attributes
     attr.LayerIndex = layer_index
-    rh_obj.CommitChanges()
+    return rh_obj.CommitChanges()
 
 
-def process_instance_definition(idef, target_layer_index, stack=None):
+def process_instance_definition(idef, target_layer_index, stack=None, failed=None):
     """
     Recursively process a block definition.
 
     Direct geometry inside this definition is moved to target_layer_index.
     Nested block contents are processed using the nested instance's own layer.
     stack is used as a guard against circular references.
+    failed collects (object id, color source) of objects that could not be moved.
     """
     if idef is None:
         return
 
     if stack is None:
         stack = set()
+
+    if failed is None:
+        failed = []
 
     if idef.Id in stack:
         return
@@ -55,10 +59,11 @@ def process_instance_definition(idef, target_layer_index, stack=None):
                     continue
 
                 nested_layer_index = obj.Attributes.LayerIndex
-                process_instance_definition(nested_idef, nested_layer_index, stack)
+                process_instance_definition(nested_idef, nested_layer_index, stack, failed)
 
             else:
-                move_object_to_layer(obj, target_layer_index)
+                if not move_object_to_layer(obj, target_layer_index):
+                    failed.append((obj.Id, obj.Attributes.ColorSource))
 
     finally:
         stack.remove(idef.Id)
@@ -74,6 +79,7 @@ def blocksToParentLayer():
         return
 
     doc = Rhino.RhinoDoc.ActiveDoc
+    failed = []
     total = len(object_ids)
 
     for i, obj_id in enumerate(object_ids, 1):
@@ -89,13 +95,20 @@ def blocksToParentLayer():
                 continue
 
             parent_layer_index = rh_obj.Attributes.LayerIndex
-            process_instance_definition(idef, parent_layer_index)
+            process_instance_definition(idef, parent_layer_index, failed=failed)
 
         else:
             pass
 
     doc.Views.Redraw()
-    print("Done.")
+
+    for obj_id, color_source in failed:
+        print("Could not move object {} (color source: {})".format(obj_id, color_source))
+
+    if failed:
+        print("Done, but {} object(s) could not be moved.".format(len(failed)))
+    else:
+        print("Done.")
 
 
 def RunCommand(is_interactive):
