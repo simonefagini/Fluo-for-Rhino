@@ -44,6 +44,7 @@ mf '_MoveFace
 mh '_MakeHole
 nb '_CreateUniqueBlock
 of '_Offset
+oo '_DisableOsnap _Toggle
 op '_Options
 p _noecho '_ProjectOsnap _Toggle
 p0 '_namedViewPerspective
