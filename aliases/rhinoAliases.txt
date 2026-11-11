@@ -57,6 +57,7 @@ pu '-Purge Enter
 rb '_ReplaceBlock
 rd '_Render
 rec '_Rectangle _3Point
+resettemp '_tempScript _Set
 rf '_rotateReference
 ro ! _Rotate
 ro3 ! _Rotate3d
