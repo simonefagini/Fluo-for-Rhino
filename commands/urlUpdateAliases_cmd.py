@@ -9,51 +9,80 @@ December 2024 in Basel, GPL3.0
 """
 
 import rhinoscriptsyntax as rs
-import os
+import time
 import urllib2
 
 __commandname__ = "urlUpdateAliases"
 
+ALIASES_URL = ("https://raw.githubusercontent.com/simonefagini/Fluo-for-Rhino/"
+               "refs/heads/main/aliases/rhinoAliases.txt")
+
+
+def FetchLines():
+    # Timestamp query avoids GitHub's ~5 min cache of the raw file
+    url = ALIASES_URL + "?t=" + str(int(time.time()))
+    response = urllib2.urlopen(url, timeout=10)
+    return [line.decode("utf-8") for line in response.readlines()]
+
+
+def ParseAliases(lines):
+    """Checks every line first. Returns (pairs, errors); nothing is changed in Rhino here."""
+    pairs = []
+    errors = []
+    seen = {}
+    for number, line in enumerate(lines, 1):
+        line = line.strip()
+        if not line:
+            continue  # blank lines are ignored
+        parts = line.split(None, 1)
+        if len(parts) < 2:
+            errors.append("line " + str(number) + ": no command for '" + parts[0] + "'")
+            continue
+        name = parts[0].lower()
+        if name in seen:
+            errors.append("line " + str(number) + ": '" + name + "' already defined on line " + str(seen[name]))
+            continue
+        seen[name] = number
+        pairs.append((name, parts[1].strip()))
+    return pairs, errors
+
 
 def UrlUpdateAliases():
-      
-    file = urllib2.urlopen("https://raw.githubusercontent.com/simonefagini/Fluo-for-Rhino/refs/heads/main/aliases/rhinoAliases.txt")
-    content = [line.decode('utf-8') for line in file.readlines()]
+    try:
+        lines = FetchLines()
+    except Exception as e:
+        print("Couldn't download rhinoAliases.txt: " + str(e))
+        return False
 
-    if not content:
-        raise ValueError ("Couldn't load or locate Alias.txt file.")
+    pairs, errors = ParseAliases(lines)
 
-    # Parse file an "unpacks" aliases and commands
-    unchecked_aliases = [line.split( )[0] for line in content]
-    aliases = [al.lower() for al in unchecked_aliases]
-    fragments = [line.split( )[1:] for line in content]
-    commands = [" ".join(fragments[i]) for i in range(0,len(fragments))]
+    if errors:
+        print("rhinoAliases.txt has errors, nothing was changed:")
+        for err in errors:
+            print("  " + err)
+        return False
+    if not pairs:
+        print("rhinoAliases.txt is empty, nothing was changed.")
+        return False
 
-    # Deletes old Rhino aliases
-    oldAliasesCount = rs.AliasCount()
-    oldAliases = rs.AliasNames()
+    # File is clean: now replace the aliases
+    oldAliases = [name.lower() for name in (rs.AliasNames() or [])]
+    newNames = set(name for name, _ in pairs)
+    removed = sorted(name for name in oldAliases if name not in newNames)
 
     for name in oldAliases:
         rs.DeleteAlias(name)
+    for name, command in pairs:
+        rs.AddAlias(name, command)
 
-    # Add aliases from txt file
-    for i in range (0, len(aliases)):
-       rs.AddAlias(aliases[i],commands[i])
-          
-    print("Aliases updated successfully!")
-    return
+    print("Aliases updated: " + str(len(pairs)) + " loaded (was " + str(len(oldAliases)) + ").")
+    if removed:
+        print("Removed (not in online file): " + ", ".join(removed))
+    return True
 
-def RunCommand( is_interactive ):
-  
-    UrlUpdateAliases()
-  
-    return 0
-    
+
+def RunCommand(is_interactive):
+    return 0 if UrlUpdateAliases() else 1
+
+
 if __name__ == "__main__":
-     
-    try:
-        UrlUpdateAliases()
-    except ValueError as e:
-        print(e)
-    except Exception:
-        print("Something went wrong...")
