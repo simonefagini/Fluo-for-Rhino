@@ -4,6 +4,10 @@
 """
 urlUpdateAliases_cmd.py
 A quick way to offload and then re-import all Rhino aliases from the latest version of rhinoAliases.txt.
+The online file is downloaded and checked first (no command for an alias, duplicate names, empty file).
+If anything is wrong, nothing is changed. Otherwise ALL current aliases are deleted and replaced by the online list,
+so personal aliases that are not in rhinoAliases.txt are lost. The command prints how many aliases were loaded and which ones were removed.
+A timestamp is added to the URL because GitHub caches the raw file for about 5 minutes.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 December 2024 in Basel, GPL3.0
 """
