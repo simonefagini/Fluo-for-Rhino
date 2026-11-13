@@ -1,5 +1,10 @@
 # Changelog
 
+## [Unreleased]
+
+### Added
+- `midOsnap` command: toggle the Midpoint object snap on and off, leaving the other active osnaps untouched. Companion to `centerOsnap`. The alias `mid` runs it.
+
 ## [1.1.0] - 2026-10-22
 
 ### Added
