@@ -37,7 +37,7 @@ Fluo-for-Rhino/
   A set of Python scripts for Rhino that tackle those odd, time-consuming tasks you don’t run into every day—but hate doing by hand. 
 
 - ### toolbar
-  The Fluo toolbar (`Fluo.rui`, built by `bundle/build_rui.py`) and one SVG icon per command, which are the source of the toolbar icons.
+  The Fluo toolbar (`Fluo.rui`, built by `bundle/build_rui.py`) and the SVG icons, a light and a dark one per command, drawn by `bundle/make_icons.py`. The SVG files are the source of the toolbar icons.
 
 - ### CHANGELOG.md
   What changed in each release.
