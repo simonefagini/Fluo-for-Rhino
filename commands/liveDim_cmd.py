@@ -4,9 +4,9 @@
 """
 liveDim_cmd.py
 A command that shows all the measures between two points while you move the cursor, a bit like the temporary dimensions of Revit.
-Pick a first point, then move: a right triangle follows the cursor, built in the active construction plane,
-with a circle around its first point as wide as the horizontal length.
-Live on screen: distance (D), horizontal length (L), height (H), dX, dY, the angle in the plane and the slope angle.
+Pick a first point, then move: the line follows the cursor in black, and is split into its X, Y and Z legs in the colours of the construction plane axes.
+A mid grey circle around the first point is as wide as the horizontal length.
+Live on screen, as text: distance (D), dX, dY and height (H) on their lines, the horizontal length (L) on the grey line between them, and the angle in the plane and the slope angle next to the cursor.
 Click to keep the measures on screen and print them in the command line, with the running total.
 The point you clicked becomes the start of the next segment, so you can go on to a third point, a fourth, and so on.
 Use the Start option to begin a new chain from another point. Enter ends the command, Escape cancels it.
@@ -29,9 +29,9 @@ from Rhino.Input.Custom import GetPoint
 __commandname__ = "liveDim"
 
 DEG = u"°"
-TEXT_HEIGHT = 18  # size in pixels of the dX, dY and angle text next to the cursor
-DOT_FILL = System.Drawing.Color.FromArgb(235, 235, 235)
-DOT_TEXT = System.Drawing.Color.Black
+TEXT_HEIGHT = 32  # size in pixels of every number on screen
+CIRCLE_COLOR = System.Drawing.Color.FromArgb(128, 128, 128)
+LENGTH_COLOR = System.Drawing.Color.FromArgb(128, 128, 128)
 
 
 def inkColor():
@@ -41,6 +41,17 @@ def inkColor():
     return System.Drawing.Color.Black if brightness > 128 else System.Drawing.Color.White
 
 
+def axisColors():
+    # The colours Rhino uses for the X, Y and Z axes of the grid
+    try:
+        look = Rhino.ApplicationSettings.AppearanceSettings
+        return look.GridXAxisLineColor, look.GridYAxisLineColor, look.GridZAxisLineColor
+    except Exception:
+        return (System.Drawing.Color.FromArgb(200, 40, 40),
+                System.Drawing.Color.FromArgb(40, 160, 40),
+                System.Drawing.Color.FromArgb(40, 80, 220))
+
+
 def measure(start, end, plane):
     """All the measures between two points, read along the axes of the given plane."""
     vec = end - start
@@ -48,6 +59,7 @@ def measure(start, end, plane):
     dy = Vector3d.Multiply(vec, plane.YAxis)
     dz = Vector3d.Multiply(vec, plane.ZAxis)
     length = math.hypot(dx, dy)
+    cornerX = start + plane.XAxis * dx
 
     return {
         "dx": dx,
@@ -59,8 +71,9 @@ def measure(start, end, plane):
         "angle": math.degrees(math.atan2(dy, dx)) % 360.0,
         # slope of the line against the plane, positive upwards
         "slope": math.degrees(math.atan2(dz, length)),
-        # the corner of the right triangle, straight below or above the end point
-        "corner": start + plane.XAxis * dx + plane.YAxis * dy,
+        # the legs of the decomposition: start -> cornerX along X, cornerX -> corner along Y, corner -> end along Z
+        "cornerX": cornerX,
+        "corner": cornerX + plane.YAxis * dy,
     }
 
 
@@ -86,27 +99,34 @@ class Session(object):
         self.total = 0.0
 
 
-def drawLabel(display, point, text):
-    # A dot with its text on a point of the model
-    display.DrawDot(point, text, DOT_FILL, DOT_TEXT)
+def drawLabel(display, viewport, point, text, color):
+    # Screen text centred just above a point of the model
+    screen = viewport.WorldToClient(point)
+    display.Draw2dText(text, color, Rhino.Geometry.Point2d(screen.X, screen.Y - TEXT_HEIGHT * 0.7), True, TEXT_HEIGHT)
 
 
-def drawSegment(display, start, end, plane, ink):
-    """Right triangle with the D, L and H dots on the middle of their lines, as in Height.py."""
+def drawSegment(display, viewport, start, end, plane, ink):
+    """The measured line in the ink colour, split into its X, Y and Z legs in the axis colours, with a number on each."""
     m = measure(start, end, plane)
     tol = sc.doc.ModelAbsoluteTolerance
+    xColor, yColor, zColor = axisColors()
 
-    display.DrawLine(start, end, ink, 2)
-    if m["length"] > tol:
-        display.DrawLine(start, m["corner"], ink, 1)
-    if abs(m["height"]) > tol:
-        display.DrawLine(m["corner"], end, ink, 1)
+    display.DrawLine(start, end, ink, 3)
+    drawLabel(display, viewport, midPoint(start, end), "D " + fmt(m["distance"]), ink)
 
-    drawLabel(display, midPoint(start, end), "D " + fmt(m["distance"]))
-    if m["length"] > tol:
-        drawLabel(display, midPoint(start, m["corner"]), "L " + fmt(m["length"]))
+    if abs(m["dx"]) > tol:
+        display.DrawLine(start, m["cornerX"], xColor, 2)
+        drawLabel(display, viewport, midPoint(start, m["cornerX"]), "dX " + fmt(m["dx"]), xColor)
+    if abs(m["dy"]) > tol:
+        display.DrawLine(m["cornerX"], m["corner"], yColor, 2)
+        drawLabel(display, viewport, midPoint(m["cornerX"], m["corner"]), "dY " + fmt(m["dy"]), yColor)
     if abs(m["height"]) > tol:
-        drawLabel(display, midPoint(m["corner"], end), "H " + fmt(m["height"]))
+        display.DrawLine(m["corner"], end, zColor, 2)
+        drawLabel(display, viewport, midPoint(m["corner"], end), "H " + fmt(m["height"]), zColor)
+    # The horizontal length is only worth showing when it differs from both dX and dY
+    if abs(m["dx"]) > tol and abs(m["dy"]) > tol:
+        display.DrawLine(start, m["corner"], LENGTH_COLOR, 1)
+        drawLabel(display, viewport, midPoint(start, m["corner"]), "L " + fmt(m["length"]), LENGTH_COLOR)
     return m
 
 
@@ -116,20 +136,19 @@ def onDynamicDraw(sender, e, session):
 
     # Segments already measured in this chain stay on screen
     for keptStart, keptEnd in session.kept:
-        drawSegment(display, keptStart, keptEnd, session.plane, ink)
+        drawSegment(display, e.Viewport, keptStart, keptEnd, session.plane, ink)
 
     start = session.start
     end = e.CurrentPoint
-    m = drawSegment(display, start, end, session.plane, ink)
+    m = drawSegment(display, e.Viewport, start, end, session.plane, ink)
 
     # Circle around the first point of the segment, in the construction plane, as wide as the horizontal length
     if m["length"] > sc.doc.ModelAbsoluteTolerance:
         circlePlane = Rhino.Geometry.Plane(start, session.plane.XAxis, session.plane.YAxis)
-        display.DrawCircle(Rhino.Geometry.Circle(circlePlane, m["length"]), ink, 1)
+        display.DrawCircle(Rhino.Geometry.Circle(circlePlane, m["length"]), CIRCLE_COLOR, 1)
 
-    # The offsets and the angles are listed next to the cursor
+    # The two angles are listed next to the cursor
     lines = [
-        "dX " + fmt(m["dx"]) + "   dY " + fmt(m["dy"]),
         u"Angle " + "{:.1f}".format(m["angle"]) + DEG,
         u"Slope " + "{:.1f}".format(m["slope"]) + DEG,
     ]
