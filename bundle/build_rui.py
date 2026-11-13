@@ -7,7 +7,8 @@ Run it with a regular Python 3 from the repository root:  python bundle/build_ru
 Every id is derived from a name, so each build writes the same file:
 re-importing an updated Fluo.rui replaces the toolbar instead of adding a second one.
 Groups are split by Rhino's own spacer item.
-Icons: one SVG per command in toolbar/icons/<command>.svg, drawn on a 48x48 viewBox.
+Icons: one SVG per command in toolbar/icons/<command>.svg, drawn on a 48x48 viewBox,
+and optionally <command>-dark.svg for Rhino's dark mode (without it the same file is used for both). bundle/make_icons.py draws them.
 A command without a file gets a placeholder circle in its group colour.
 Run with --placeholders to write those circles out as files, without touching existing ones.
 Rhino 8 reads icons from <icons> (SVG, light and dark version, linked by the macro's bitmap_id).
@@ -35,7 +36,7 @@ GROUPS = [
         ("axo", "deaxo"),
         ("namedViewPerspective", "restoreView"),
         ("toggleClip", None),
-        ("centerOsnap", None),
+        ("centerOsnap", "midOsnap"),
     ]),
     ("Transform", "#F97316", [
         ("moveVertical", "copyVertical"),
@@ -52,6 +53,7 @@ GROUPS = [
         ("heightDot", None),
         ("countingDot", None),
         ("clickCounter", None),
+        ("liveDim", None),
     ]),
     ("Layers & blocks", "#EAB308", [
         ("objectsByLayer", "blocksByLayer"),
@@ -165,9 +167,11 @@ def iconPath(name):
     return os.path.join(ICONS_DIR, name + ".svg")
 
 
-def readIcon(name, color):
-    """The command's SVG file, cleaned up to sit inside the .rui, or the placeholder circle."""
+def readIcon(name, color, dark=False):
+    """The command's SVG file (its -dark version for dark mode, if there is one), cleaned up to sit inside the .rui, or the placeholder circle."""
     path = iconPath(name)
+    if dark and os.path.isfile(iconPath(name + "-dark")):
+        path = iconPath(name + "-dark")
     if not os.path.isfile(path):
         return svgIcon(color), False
     with open(path, "r", encoding="utf-8") as f:
@@ -233,10 +237,11 @@ def buildRui():
     for name, color in commands:
         iconId = stableId("bitmap/" + name)
         svg, fromFile = readIcon(name, color)
+        darkSvg, _ = readIcon(name, color, dark=True)
         fromFiles += fromFile
         lines.append('    <icon guid="' + iconId + '" name="' + iconId + '.svg">')
         lines.append("      <light>" + svg + "</light>")
-        lines.append("      <dark>" + svg + "</dark>")
+        lines.append("      <dark>" + darkSvg + "</dark>")
         lines.append("    </icon>")
 
     lines += ["  </icons>", "  <bitmaps>"]

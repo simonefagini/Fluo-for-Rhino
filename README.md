@@ -28,7 +28,7 @@ Fluo-for-Rhino/
   Images used in the guides and READMEs.
 
 - ### bundle
-  The README and the build scripts for the plugin bundle attached to each release: `python bundle/build.py` builds the zip, `python bundle/build_rui.py` builds the toolbar file.
+  The README and the build scripts for the plugin bundle attached to each release: `python bundle/build.py` builds the zip, `python bundle/build_rui.py` builds the toolbar file, `python bundle/make_icons.py` draws its icons.
 
 - ### commands
   A collection of Python-based Rhino commands designed to enhance functionality and provide useful tools for an improved Rhino experience.
@@ -37,7 +37,8 @@ Fluo-for-Rhino/
   A set of Python scripts for Rhino that tackle those odd, time-consuming tasks you don’t run into every day—but hate doing by hand. 
 
 - ### toolbar
-  The Fluo toolbar (`Fluo.rui`, built by `bundle/build_rui.py`) and one SVG icon per command, which are the source of the toolbar icons.
+  The Fluo toolbar (`Fluo.rui`, built by `bundle/build_rui.py`) and the SVG icons, a light and a dark one per command, drawn by `bundle/make_icons.py`. The SVG files are the source of the toolbar icons.
+  The icons are AI-generated: drawn by Claude Sonnet 5.5, a large language model by Anthropic, in the style of Rhino's own command icons. They are not official McNeel artwork.
 
 - ### CHANGELOG.md
   What changed in each release.
