@@ -49,6 +49,8 @@ Fluo-for-Rhino/
 **Fluo-for-Rhino** is also available as a ready-to-use Rhino plugin that bundles all the custom commands from this repository.
 Download the latest `Fluo-for-Rhino-vX.Y.Z.zip` from the [Releases page](https://github.com/simonefagini/Fluo-for-Rhino/releases/latest) and unzip it. The folder inside is already named `Fluo-for-Rhino {df47bd45-3187-4912-8324-4b2288908bb8}`, keep that name as it is.
 
+💡 **NOTE**: Releases are tested. The `main` branch may hold newer changes that are not, so if you copy single files from the repository, expect them to be less tested than the release.
+
 ### Rhino for Windows
 To add the full bundle to your Windows environment, place the unzipped folder in:
 
