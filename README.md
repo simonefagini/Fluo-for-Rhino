@@ -71,6 +71,11 @@ To add the full bundle to your Mac OS environment, place the unzipped folder in:
 If you want to make your own plug-in or bundle of commands, follow the steps in the official [guide](https://developer.rhino3d.com/en/guides/rhinopython/7/creating-rhino-commands-using-python/).
 
 
+## Aliases
+The [aliases](aliases/README.md) can be imported by hand from Rhino's `Tools > Options > Aliases`, following the steps in the aliases README.
+With the plugin installed, the `urlUpdateAliases` command downloads the latest [rhinoAliases.txt](aliases/rhinoAliases.txt) from GitHub and loads it in one go.
+
+
 ## Useful Links
 
 - [Rhinotools](https://github.com/ejnaren/rhinotools/tree/master)  –  Ejnar Brendsdal great toolbox for Rhino (included Rhino v8 by default)

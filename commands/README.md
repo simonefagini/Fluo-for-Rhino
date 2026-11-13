@@ -65,6 +65,7 @@ commands/
 - ### urlUpdateAliases_cmd.py
   A quick way to offload and then re-import all Rhino aliases from the latest version of [rhinoAliases.txt](/aliases/rhinoAliases.txt).<br>
   Requires IronPython 2.7 (urllib2). :warning:<br>
+  It replaces **all** the aliases you have with the online list: any personal alias not in `rhinoAliases.txt` is deleted (the removed names are printed in the command line).<br>
   Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### namedViewPerspective_cmd.py
