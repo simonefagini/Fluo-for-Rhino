@@ -29,10 +29,14 @@ from Rhino.Input.Custom import GetPoint
 __commandname__ = "liveDim"
 
 DEG = u"°"
-LINE_COLOR = System.Drawing.Color.FromArgb(40, 40, 40)
-DOT_FILL = System.Drawing.Color.FromArgb(235, 235, 235)
-DOT_TEXT = System.Drawing.Color.Black
-TEXT_COLOR = System.Drawing.Color.FromArgb(30, 30, 30)
+TEXT_HEIGHT = 18  # size in pixels of every number on screen
+
+
+def inkColor():
+    # Black on a light viewport background, white on a dark one
+    background = Rhino.ApplicationSettings.AppearanceSettings.ViewportBackgroundColor
+    brightness = 0.299 * background.R + 0.587 * background.G + 0.114 * background.B
+    return System.Drawing.Color.Black if brightness > 128 else System.Drawing.Color.White
 
 
 def measure(start, end, plane):
@@ -80,40 +84,47 @@ class Session(object):
         self.total = 0.0
 
 
-def drawSegment(display, start, end, plane):
-    """Right triangle with the D, L and H dots, as in Height.py."""
+def drawLabel(display, viewport, point, text, ink):
+    # Text on the screen, centred on a point of the model
+    screen = viewport.WorldToClient(point)
+    display.Draw2dText(text, ink, Rhino.Geometry.Point2d(screen.X, screen.Y), True, TEXT_HEIGHT)
+
+
+def drawSegment(display, viewport, start, end, plane, ink):
+    """Right triangle with the D, L and H labels on the middle of their lines, as in Height.py."""
     m = measure(start, end, plane)
     tol = sc.doc.ModelAbsoluteTolerance
 
-    display.DrawLine(start, end, LINE_COLOR, 2)
+    display.DrawLine(start, end, ink, 2)
     if m["length"] > tol:
-        display.DrawLine(start, m["corner"], LINE_COLOR, 1)
+        display.DrawLine(start, m["corner"], ink, 1)
     if abs(m["height"]) > tol:
-        display.DrawLine(m["corner"], end, LINE_COLOR, 1)
+        display.DrawLine(m["corner"], end, ink, 1)
 
-    display.DrawDot(midPoint(start, end), "D " + fmt(m["distance"]), DOT_FILL, DOT_TEXT)
+    drawLabel(display, viewport, midPoint(start, end), "D " + fmt(m["distance"]), ink)
     if m["length"] > tol:
-        display.DrawDot(midPoint(start, m["corner"]), "L " + fmt(m["length"]), DOT_FILL, DOT_TEXT)
+        drawLabel(display, viewport, midPoint(start, m["corner"]), "L " + fmt(m["length"]), ink)
     if abs(m["height"]) > tol:
-        display.DrawDot(midPoint(m["corner"], end), "H " + fmt(m["height"]), DOT_FILL, DOT_TEXT)
+        drawLabel(display, viewport, midPoint(m["corner"], end), "H " + fmt(m["height"]), ink)
     return m
 
 
 def onDynamicDraw(sender, e, session):
     display = e.Display
+    ink = inkColor()
 
     # Segments already measured in this chain stay on screen
     for keptStart, keptEnd in session.kept:
-        drawSegment(display, keptStart, keptEnd, session.plane)
+        drawSegment(display, e.Viewport, keptStart, keptEnd, session.plane, ink)
 
     start = session.start
     end = e.CurrentPoint
-    m = drawSegment(display, start, end, session.plane)
+    m = drawSegment(display, e.Viewport, start, end, session.plane, ink)
 
     # Circle around the first point of the segment, in the construction plane, as wide as the horizontal length
     if m["length"] > sc.doc.ModelAbsoluteTolerance:
         circlePlane = Rhino.Geometry.Plane(start, session.plane.XAxis, session.plane.YAxis)
-        display.DrawCircle(Rhino.Geometry.Circle(circlePlane, m["length"]), LINE_COLOR, 1)
+        display.DrawCircle(Rhino.Geometry.Circle(circlePlane, m["length"]), ink, 1)
 
     # The offsets and the angles are listed next to the cursor
     lines = [
@@ -123,7 +134,7 @@ def onDynamicDraw(sender, e, session):
     ]
     screen = e.Viewport.WorldToClient(end)
     for i, text in enumerate(lines):
-        display.Draw2dText(text, TEXT_COLOR, Rhino.Geometry.Point2d(screen.X + 24, screen.Y + 24 + i * 18), False, 14)
+        display.Draw2dText(text, ink, Rhino.Geometry.Point2d(screen.X + 24, screen.Y + 24 + i * (TEXT_HEIGHT + 6)), False, TEXT_HEIGHT)
 
 
 def getFirstPoint():
