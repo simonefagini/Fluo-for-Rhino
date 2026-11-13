@@ -53,6 +53,7 @@ p0 '_namedViewPerspective
 pcp '_ProjectToCPlane
 pl '_Polyline
 po '_allPointsOn
+pop '_PopupMenu
 pp '_PushPull
 pu '-Purge Enter
 rb '_ReplaceBlock
