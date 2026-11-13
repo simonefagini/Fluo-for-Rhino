@@ -90,3 +90,8 @@ def RunCommand(is_interactive):
 
 
 if __name__ == "__main__":
+
+    try:
+        UrlUpdateAliases()
+    except Exception as e:
+        print("Something went wrong: " + str(e))
