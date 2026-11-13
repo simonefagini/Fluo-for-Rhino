@@ -75,7 +75,7 @@ If you want to make your own plug-in or bundle of commands, follow the steps in 
 
 ## Aliases
 The [aliases](aliases/README.md) can be imported by hand from Rhino's `Tools > Options > Aliases`, following the steps in the aliases README.
-With the plugin installed, the `urlUpdateAliases` command downloads the latest [rhinoAliases.txt](aliases/rhinoAliases.txt) from GitHub and loads it in one go. `localUpdateAliases` does the same from a `.txt` file on your computer.
+With the plugin installed, the `urlAliasUpdate` command downloads the latest [rhinoAliases.txt](aliases/rhinoAliases.txt) from GitHub and loads it in one go. `localAliasUpdate` does the same from a `.txt` file on your computer.
 
 
 ## Useful Links

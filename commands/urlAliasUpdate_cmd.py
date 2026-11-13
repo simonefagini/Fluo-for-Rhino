@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-urlUpdateAliases_cmd.py
+urlAliasUpdate_cmd.py
 A quick way to offload and then re-import all Rhino aliases from the latest version of rhinoAliases.txt.
 The online file is downloaded and checked first (no command for an alias, duplicate names, empty file).
 If anything is wrong, nothing is changed. Otherwise ALL current aliases are deleted and replaced by the online list,
@@ -17,7 +17,7 @@ import rhinoscriptsyntax as rs
 import time
 import urllib2
 
-__commandname__ = "urlUpdateAliases"
+__commandname__ = "urlAliasUpdate"
 
 ALIASES_URL = ("https://raw.githubusercontent.com/simonefagini/Fluo-for-Rhino/"
                "refs/heads/main/aliases/rhinoAliases.txt")
@@ -52,7 +52,7 @@ def ParseAliases(lines):
     return pairs, errors
 
 
-def UrlUpdateAliases():
+def UrlAliasUpdate():
     try:
         lines = FetchLines()
     except Exception as e:
@@ -87,12 +87,12 @@ def UrlUpdateAliases():
 
 
 def RunCommand(is_interactive):
-    return 0 if UrlUpdateAliases() else 1
+    return 0 if UrlAliasUpdate() else 1
 
 
 if __name__ == "__main__":
 
     try:
-        UrlUpdateAliases()
+        UrlAliasUpdate()
     except Exception as e:
         print("Something went wrong: " + str(e))

@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 """
-localUpdateAliases_cmd.py
-Twin of urlUpdateAliases: offload and then re-import all Rhino aliases, but from an alias .txt file on your computer instead of the online one.
+localAliasUpdate_cmd.py
+Twin of urlAliasUpdate: offload and then re-import all Rhino aliases, but from an alias .txt file on your computer instead of the online one.
 Useful on a fresh install, on a new machine, or to try an edited rhinoAliases.txt before it goes online.
 The file is picked in a dialog, then checked first (no command for an alias, duplicate names, empty file).
 If anything is wrong, nothing is changed. Otherwise ALL current aliases are deleted and replaced by the ones in the file,
@@ -16,7 +16,7 @@ November 2026 in Basel, GPL3.0
 import io
 import rhinoscriptsyntax as rs
 
-__commandname__ = "localUpdateAliases"
+__commandname__ = "localAliasUpdate"
 
 
 def ReadLines(path):
@@ -47,7 +47,7 @@ def ParseAliases(lines):
     return pairs, errors
 
 
-def LocalUpdateAliases():
+def LocalAliasUpdate():
     path = rs.OpenFileName("Select the aliases file", "Text files (*.txt)|*.txt||")
     if not path:
         print("User canceled...")
@@ -87,12 +87,12 @@ def LocalUpdateAliases():
 
 
 def RunCommand(is_interactive):
-    return 0 if LocalUpdateAliases() else 1
+    return 0 if LocalAliasUpdate() else 1
 
 
 if __name__ == "__main__":
 
     try:
-        LocalUpdateAliases()
+        LocalAliasUpdate()
     except Exception as e:
         print("Something went wrong: " + str(e))
