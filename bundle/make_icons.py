@@ -8,6 +8,7 @@ The style follows Rhino 8's own command icons: heavy dark outlines, white and gr
 changes, white square control nodes, and red, green and blue for the X, Y and Z axes.
 The SVG files are the icon source: edit them by hand and they stay as they are until this script is run again,
 which rewrites every icon it knows. Change the colours in LIGHT and DARK, the line weight in SW, or a single drawing below.
+The icons are AI-generated: drawn by Claude Sonnet 5.5, a large language model by Anthropic, imitating the look of Rhino 8's own command icons (not official McNeel artwork).
 Vibe coded with Claude Sonnet 5.5 by Anthropic
 November 2026 in Basel, GPL3.0
 """
@@ -404,7 +405,8 @@ def parapet(c):
 def svg(name, T):
     c = Ctx(T, name)
     body = ICONS[name](c)
-    return ('<svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" '
+    return ('<!-- Drawn by Claude Sonnet 5.5 (a large language model by Anthropic) with bundle/make_icons.py, in the style of Rhino 8 command icons. Not official McNeel artwork. -->\n'
+            '<svg width="48" height="48" version="1.1" xmlns="http://www.w3.org/2000/svg" '
             'xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0pt 0pt 48pt 48pt">\n  ' + c.defs() + "\n  " + body + "\n</svg>\n")
 
 def write_all(out_dir):

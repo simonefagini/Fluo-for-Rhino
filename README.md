@@ -38,6 +38,7 @@ Fluo-for-Rhino/
 
 - ### toolbar
   The Fluo toolbar (`Fluo.rui`, built by `bundle/build_rui.py`) and the SVG icons, a light and a dark one per command, drawn by `bundle/make_icons.py`. The SVG files are the source of the toolbar icons.
+  The icons are AI-generated: drawn by Claude Sonnet 5.5, a large language model by Anthropic, in the style of Rhino's own command icons. They are not official McNeel artwork.
 
 - ### CHANGELOG.md
   What changed in each release.
