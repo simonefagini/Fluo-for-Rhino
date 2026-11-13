@@ -32,6 +32,7 @@ commands/
 ├── axo_cmd.py
 ├── keep_cmd.py
 ├── centerOsnap_cmd.py
+├── midOsnap_cmd.py
 ├── dupAllBorder_cmd.py
 ├── moveVertical_cmd.py
 ├── namedViewPerspective_cmd.py
@@ -104,6 +105,10 @@ commands/
    0x8000000   Point (or 8388608)
    ```
    Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
+
+- ### midOsnap_cmd.py
+  A command to toggle the **Midpoint** object snap on and off in Rhino, companion to [centerOsnap](/commands/centerOsnap_cmd.py). The other active osnaps are left untouched.<br>
+  Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
 
 - ### keep_cmd.py
   A command to randomly keep a user-defined percentage of pre-selected objects in Rhino, useful for quick decimation and random sampling.<br>
