@@ -4,6 +4,7 @@
 
 ### Added
 - `midOsnap` command: toggle the Midpoint object snap on and off, leaving the other active osnaps untouched. Companion to `centerOsnap`. The alias `mid` runs it.
+- `localUpdateAliases` command: twin of `urlUpdateAliases` that loads the aliases from a `.txt` file you pick on your computer. It checks the file first and replaces all your current aliases with the ones in it.
 
 ## [1.1.0] - 2026-10-22
 
