@@ -37,7 +37,7 @@ aliases/
 
 - ### rhinoAliases.txt
   Main .txt file containing custom aliases <br>
-  <u>See also:</u> [`urlUpdateAliases_cmd.py`](/commands/urlUpdateAliases_cmd.py), a command to offload and re-import all aliases from the latest online version of this file.
+  <u>See also:</u> [`urlAliasUpdate_cmd.py`](/commands/urlAliasUpdate_cmd.py), a command to offload and re-import all aliases from the latest online version of this file, and [`localAliasUpdate_cmd.py`](/commands/localAliasUpdate_cmd.py), its twin that loads a `.txt` file from your computer.
 
 - ### sortAliases.py
   Helping tool to __sort aliases alphabetically__.

@@ -36,7 +36,8 @@ commands/
 ├── dupAllBorder_cmd.py
 ├── moveVertical_cmd.py
 ├── namedViewPerspective_cmd.py
-├── urlUpdateAliases_cmd.py
+├── urlAliasUpdate_cmd.py
+├── localAliasUpdate_cmd.py
 ├── objectsByLayer_cmd.py
 ├── restoreView_cmd.py
 ├── allPointsOn_cmd.py    
@@ -62,11 +63,17 @@ commands/
   Targeted properties: Object Color, Material, Linetype, Print Color, and Print Width.<br>
   Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
   
-- ### urlUpdateAliases_cmd.py
+- ### urlAliasUpdate_cmd.py
   A quick way to offload and then re-import all Rhino aliases from the latest version of [rhinoAliases.txt](/aliases/rhinoAliases.txt).<br>
   Requires IronPython 2.7 (urllib2). :warning:<br>
   It replaces **all** the aliases you have with the online list: any personal alias not in `rhinoAliases.txt` is deleted (the removed names are printed in the command line).<br>
   Tested on Rhino v7 on MacOS 14.2 and Rhino v8 on Windows 11.
+
+- ### localAliasUpdate_cmd.py
+  Twin of [urlAliasUpdate](/commands/urlAliasUpdate_cmd.py): offloads and re-imports all Rhino aliases, but from an alias `.txt` file you pick on your computer.
+  Handy on a fresh install, on a new machine, or to try an edited alias file before it goes online.
+  The file is checked first and nothing changes if it has errors. It replaces **all** the aliases you have with the ones in the file: any personal alias not in the file is deleted (the removed names are printed in the command line).<br>
+  Requires IronPython 2.7. :warning:<br>
 
 - ### namedViewPerspective_cmd.py
   A command to temporarily switch the current view to a Perspective view, making it easier to orbit and navigate for an improved modeling experience.

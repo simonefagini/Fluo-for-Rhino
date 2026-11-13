@@ -66,7 +66,7 @@ GROUPS = [
         ("dwg", None),
     ]),
     ("Setup", "#9CA3AF", [
-        ("urlUpdateAliases", None),
+        ("urlAliasUpdate", "localAliasUpdate"),
         ("tempScript", None),
     ]),
 ]
