@@ -61,7 +61,7 @@ C:\Users\%username%\AppData\Roaming\McNeel\Rhinoceros\8.0\Plug-ins\PythonPlugins
 To add the full bundle to your Mac OS environment, place the unzipped folder in:
 
 ```plaintext
-/Users/~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/PythonPlugIns/
+~/Library/Application Support/McNeel/Rhinoceros/8.0/Plug-ins/PythonPlugIns/
 ```
 
 
