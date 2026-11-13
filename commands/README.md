@@ -230,7 +230,7 @@ commands/
 
 - ### liveDim_cmd.py
   Shows all the measures between two points while you move the cursor, a bit like the temporary dimensions of Revit.<br>
-  A right triangle follows the cursor in the active construction plane, with the distance (D), the horizontal length (L), the height (H), dX, dY, the angle in the plane and the slope angle. Click to print the values in the command line and keep measuring from the same first point; the `Start` option picks a new one. Nothing is added to the model.<br>
+  A right triangle follows the cursor in the active construction plane, with a circle around its first point and the distance (D), the horizontal length (L), the height (H), dX, dY, the angle in the plane and the slope angle. Click to keep the measures on screen and print them with the running total; the clicked point starts the next segment, so you can go on to a third point and so on. The `Start` option begins a new chain. Enter ends the command and Escape cancels it. Nothing is added to the model.<br>
   Inspired by [Height.py](https://github.com/TSRChapman/LandArchTools-for-Rhino/blob/main/Height.py) from LandArchTools-for-Rhino by Thomas Chapman.<br>
   Alias `dm`.<br>
   Not tested yet on Rhino v8.

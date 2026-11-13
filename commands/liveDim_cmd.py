@@ -4,11 +4,13 @@
 """
 liveDim_cmd.py
 A command that shows all the measures between two points while you move the cursor, a bit like the temporary dimensions of Revit.
-Pick a first point, then move: a right triangle follows the cursor, built in the active construction plane.
+Pick a first point, then move: a right triangle follows the cursor, built in the active construction plane,
+with a circle around its first point as wide as the horizontal length.
 Live on screen: distance (D), horizontal length (L), height (H), dX, dY, the angle in the plane and the slope angle.
-Click to print the measures in the command line; the first point stays, so you can keep measuring from it.
-Use the Start option to pick a new first point. Enter or Escape ends the command.
-Nothing is created in the model. Values are in the document units.
+Click to keep the measures on screen and print them in the command line, with the running total.
+The point you clicked becomes the start of the next segment, so you can go on to a third point, a fourth, and so on.
+Use the Start option to begin a new chain from another point. Enter ends the command, Escape cancels it.
+Nothing is created in the model: the kept measures disappear when the command ends. Values are in the document units.
 Inspired by Height.py from LandArchTools-for-Rhino by Thomas Chapman (https://github.com/TSRChapman/LandArchTools-for-Rhino)
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 Vibe coded with Claude Sonnet 5.5 by Anthropic
@@ -74,28 +76,46 @@ class Session(object):
     def __init__(self, start):
         self.start = start
         self.plane = activePlane()
+        self.kept = []  # measured segments of this chain: (start, end)
+        self.total = 0.0
+
+
+def drawSegment(display, start, end, plane):
+    """Right triangle with the D, L and H dots, as in Height.py."""
+    m = measure(start, end, plane)
+    tol = sc.doc.ModelAbsoluteTolerance
+
+    display.DrawLine(start, end, LINE_COLOR, 2)
+    if m["length"] > tol:
+        display.DrawLine(start, m["corner"], LINE_COLOR, 1)
+    if abs(m["height"]) > tol:
+        display.DrawLine(m["corner"], end, LINE_COLOR, 1)
+
+    display.DrawDot(midPoint(start, end), "D " + fmt(m["distance"]), DOT_FILL, DOT_TEXT)
+    if m["length"] > tol:
+        display.DrawDot(midPoint(start, m["corner"]), "L " + fmt(m["length"]), DOT_FILL, DOT_TEXT)
+    if abs(m["height"]) > tol:
+        display.DrawDot(midPoint(m["corner"], end), "H " + fmt(m["height"]), DOT_FILL, DOT_TEXT)
+    return m
 
 
 def onDynamicDraw(sender, e, session):
-    start = session.start
-    end = e.CurrentPoint
-    m = measure(start, end, session.plane)
     display = e.Display
 
-    display.DrawLine(start, end, LINE_COLOR, 2)
-    if m["length"] > sc.doc.ModelAbsoluteTolerance:
-        display.DrawLine(start, m["corner"], LINE_COLOR, 1)
-    if abs(m["height"]) > sc.doc.ModelAbsoluteTolerance:
-        display.DrawLine(m["corner"], end, LINE_COLOR, 1)
+    # Segments already measured in this chain stay on screen
+    for keptStart, keptEnd in session.kept:
+        drawSegment(display, keptStart, keptEnd, session.plane)
 
-    # D, L and H sit on the middle of their lines, as in Height.py
-    display.DrawDot(midPoint(start, end), "D " + fmt(m["distance"]), DOT_FILL, DOT_TEXT)
-    if m["length"] > sc.doc.ModelAbsoluteTolerance:
-        display.DrawDot(midPoint(start, m["corner"]), "L " + fmt(m["length"]), DOT_FILL, DOT_TEXT)
-    if abs(m["height"]) > sc.doc.ModelAbsoluteTolerance:
-        display.DrawDot(midPoint(m["corner"], end), "H " + fmt(m["height"]), DOT_FILL, DOT_TEXT)
+    start = session.start
+    end = e.CurrentPoint
+    m = drawSegment(display, start, end, session.plane)
 
-    # The angles and the plane offsets are listed next to the cursor
+    # Circle around the first point of the segment, in the construction plane, as wide as the horizontal length
+    if m["length"] > sc.doc.ModelAbsoluteTolerance:
+        circlePlane = Rhino.Geometry.Plane(start, session.plane.XAxis, session.plane.YAxis)
+        display.DrawCircle(Rhino.Geometry.Circle(circlePlane, m["length"]), LINE_COLOR, 1)
+
+    # The offsets and the angles are listed next to the cursor
     lines = [
         "dX " + fmt(m["dx"]) + "   dY " + fmt(m["dy"]),
         u"Angle " + "{:.1f}".format(m["angle"]) + DEG,
@@ -117,48 +137,56 @@ def getFirstPoint():
 def liveDim():
     start = getFirstPoint()
     if start is None:
-        return
+        return False
 
     session = Session(start)
+    unit = rs.UnitSystemName(False, False, True)
 
     while True:
         gp = GetPoint()
-        gp.SetCommandPrompt("Pick second point, Enter to finish")
+        gp.SetCommandPrompt("Pick next point, Enter to finish")
         gp.AcceptNothing(True)
         gp.AddOption("Start")
         gp.SetBasePoint(session.start, True)
-        gp.DynamicDraw += lambda sender, e: onDynamicDraw(sender, e, session)
+        handler = lambda sender, e: onDynamicDraw(sender, e, session)
+        gp.DynamicDraw += handler
 
-        result = gp.Get()
+        try:
+            result = gp.Get()
+        finally:
+            gp.DynamicDraw -= handler
 
         if result == GetResult.Point:
-            m = measure(session.start, gp.Point(), session.plane)
-            unit = rs.UnitSystemName(False, False, True)
-            print(("Distance " + fmt(m["distance"]) + " | Length " + fmt(m["length"]) +
+            end = gp.Point()
+            m = measure(session.start, end, session.plane)
+            session.total += m["distance"]
+            session.kept.append((session.start, end))
+            print((u"Distance " + fmt(m["distance"]) + " | Length " + fmt(m["length"]) +
                    " | Height " + fmt(m["height"]) + " | dX " + fmt(m["dx"]) + " | dY " + fmt(m["dy"]) +
                    u" | Angle " + "{:.1f}".format(m["angle"]) + DEG +
-                   u" | Slope " + "{:.1f}".format(m["slope"]) + DEG + " (" + unit + ")"))
+                   u" | Slope " + "{:.1f}".format(m["slope"]) + DEG +
+                   " | Total " + fmt(session.total) + " (" + unit + ")"))
+            # The point just clicked is where the next segment starts
+            session.start = end
             continue
 
         if result == GetResult.Option:
             newStart = getFirstPoint()
             if newStart is not None:
-                session.start = newStart
-                session.plane = activePlane()
+                session = Session(newStart)
             continue
 
-        return  # Enter or Escape
+        sc.doc.Views.Redraw()
+        return result == GetResult.Nothing  # Enter finishes, Escape cancels
 
 
 def RunCommand(is_interactive):
 
-    liveDim()
-
-    return 0
+    return 0 if liveDim() else 1
 
 if __name__ == "__main__":
 
     try:
         liveDim()
     except Exception as e:
-        print("Something went wrong: " + str(e))
+        print("Something went wrong (" + e.__class__.__name__ + "): " + str(e))
