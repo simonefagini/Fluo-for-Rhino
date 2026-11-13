@@ -7,6 +7,7 @@ A command to toggle the Midpoint object snap on and off in Rhino.
 Companion to centerOsnap: the other active osnaps are left untouched.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 November 2026 in Basel, GPL3.0
+Vibe coded with Claude Sonnet 5.5 by Anthropic
 """
 
 import rhinoscriptsyntax as rs
