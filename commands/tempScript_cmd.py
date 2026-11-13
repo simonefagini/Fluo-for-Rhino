@@ -11,6 +11,7 @@ If the saved script has been moved or deleted, the command says so and opens the
 Aliases: temp runs the saved script at once ('_tempScript _Enter), resettemp opens the file dialog to pick another one ('_tempScript _Set).
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 October 2026 in Basel, GPL3.0
+Vibe coded with Claude Sonnet 5.5 by Anthropic
 """
 
 import os

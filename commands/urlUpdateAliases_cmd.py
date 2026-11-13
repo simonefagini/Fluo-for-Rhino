@@ -10,6 +10,7 @@ so personal aliases that are not in rhinoAliases.txt are lost. The command print
 A timestamp is added to the URL because GitHub caches the raw file for about 5 minutes.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 December 2024 in Basel, GPL3.0
+Vibe coded with Claude Sonnet 5.5 by Anthropic
 """
 
 import rhinoscriptsyntax as rs

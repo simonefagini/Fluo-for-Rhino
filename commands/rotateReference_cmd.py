@@ -8,6 +8,7 @@ and the objects turn by the angle between the two, around the center you pick.
 Rotation happens in the active construction plane.
 Written by simone fagini as part of Fluo-for-Rhino (https://github.com/simonefagini/Fluo-for-Rhino/)
 November 2025 in Basel, GPL3.0
+Vibe coded with Claude Sonnet 5.5 by Anthropic
 """
 
 import rhinoscriptsyntax as rs
