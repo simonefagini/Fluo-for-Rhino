@@ -29,7 +29,9 @@ from Rhino.Input.Custom import GetPoint
 __commandname__ = "liveDim"
 
 DEG = u"°"
-TEXT_HEIGHT = 18  # size in pixels of every number on screen
+TEXT_HEIGHT = 18  # size in pixels of the dX, dY and angle text next to the cursor
+DOT_FILL = System.Drawing.Color.FromArgb(235, 235, 235)
+DOT_TEXT = System.Drawing.Color.Black
 
 
 def inkColor():
@@ -84,14 +86,13 @@ class Session(object):
         self.total = 0.0
 
 
-def drawLabel(display, viewport, point, text, ink):
-    # Text on the screen, centred on a point of the model
-    screen = viewport.WorldToClient(point)
-    display.Draw2dText(text, ink, Rhino.Geometry.Point2d(screen.X, screen.Y), True, TEXT_HEIGHT)
+def drawLabel(display, point, text):
+    # A dot with its text on a point of the model
+    display.DrawDot(point, text, DOT_FILL, DOT_TEXT)
 
 
-def drawSegment(display, viewport, start, end, plane, ink):
-    """Right triangle with the D, L and H labels on the middle of their lines, as in Height.py."""
+def drawSegment(display, start, end, plane, ink):
+    """Right triangle with the D, L and H dots on the middle of their lines, as in Height.py."""
     m = measure(start, end, plane)
     tol = sc.doc.ModelAbsoluteTolerance
 
@@ -101,11 +102,11 @@ def drawSegment(display, viewport, start, end, plane, ink):
     if abs(m["height"]) > tol:
         display.DrawLine(m["corner"], end, ink, 1)
 
-    drawLabel(display, viewport, midPoint(start, end), "D " + fmt(m["distance"]), ink)
+    drawLabel(display, midPoint(start, end), "D " + fmt(m["distance"]))
     if m["length"] > tol:
-        drawLabel(display, viewport, midPoint(start, m["corner"]), "L " + fmt(m["length"]), ink)
+        drawLabel(display, midPoint(start, m["corner"]), "L " + fmt(m["length"]))
     if abs(m["height"]) > tol:
-        drawLabel(display, viewport, midPoint(m["corner"], end), "H " + fmt(m["height"]), ink)
+        drawLabel(display, midPoint(m["corner"], end), "H " + fmt(m["height"]))
     return m
 
 
@@ -115,11 +116,11 @@ def onDynamicDraw(sender, e, session):
 
     # Segments already measured in this chain stay on screen
     for keptStart, keptEnd in session.kept:
-        drawSegment(display, e.Viewport, keptStart, keptEnd, session.plane, ink)
+        drawSegment(display, keptStart, keptEnd, session.plane, ink)
 
     start = session.start
     end = e.CurrentPoint
-    m = drawSegment(display, e.Viewport, start, end, session.plane, ink)
+    m = drawSegment(display, start, end, session.plane, ink)
 
     # Circle around the first point of the segment, in the construction plane, as wide as the horizontal length
     if m["length"] > sc.doc.ModelAbsoluteTolerance:
