@@ -22,6 +22,7 @@ db '_dupAllBorder
 dd '_Distribute 'Pause _Direction
 de '_DupEdge
 dff '_DupFaceBorder
+dm '_liveDim
 ex '_Extrudecrv
 gh '_Grasshopper
 hh '_Hide

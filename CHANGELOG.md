@@ -5,6 +5,7 @@
 ### Added
 - `midOsnap` command: toggle the Midpoint object snap on and off, leaving the other active osnaps untouched. Companion to `centerOsnap`. The alias `mid` runs it.
 - `localAliasUpdate` command: twin of `urlAliasUpdate` that loads the aliases from a `.txt` file you pick on your computer. It checks the file first and replaces all your current aliases with the ones in it.
+- `liveDim` command (alias `dm`): shows distance, horizontal length, height, dX, dY, the angle in the plane and the slope angle live while you move the cursor, and prints them on click. Inspired by Height.py from LandArchTools-for-Rhino.
 - New alias `aliasLocal` runs `localAliasUpdate`.
 - New alias `pop` shows Rhino's popup menu (`_PopupMenu`) at the cursor.
 - Both alias commands are on the toolbar (`urlAliasUpdate` left click, `localAliasUpdate` right click), `localAliasUpdate` still with a placeholder icon.
