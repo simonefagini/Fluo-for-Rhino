@@ -232,7 +232,7 @@ commands/
   Shows all the measures between two points while you move the cursor, a bit like the temporary dimensions of Revit.<br>
   A right triangle follows the cursor in the active construction plane, with the distance (D), the horizontal length (L), the height (H), dX, dY, the angle in the plane and the slope angle. Click to print the values in the command line and keep measuring from the same first point; the `Start` option picks a new one. Nothing is added to the model.<br>
   Inspired by [Height.py](https://github.com/TSRChapman/LandArchTools-for-Rhino/blob/main/Height.py) from LandArchTools-for-Rhino by Thomas Chapman.<br>
-  Alias `dim`, which takes over the name of Rhino's own `Dim` command.<br>
+  Alias `dm`.<br>
   Not tested yet on Rhino v8.
 
 - ### blocksByLayer_cmd.py
