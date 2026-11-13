@@ -17,6 +17,7 @@ commands/
 ├── countingDot_cmd.py
 ├── blocksByLayer_cmd.py
 ├── heightDot_cmd.py
+├── liveDim_cmd.py
 ├── parapet_cmd.py
 ├── dwg_cmd.py
 ├── clickCounter_cmd.py
@@ -226,6 +227,13 @@ commands/
   Sets a quick text dot with insertion point height values, based on z-axis of current cPlane. <br>
   Use the `Unit` option while picking to choose mm, cm, m or the document unit (default: m, remembered during the session).
   Tested on Rhino v7 on MacOS 14.2.
+
+- ### liveDim_cmd.py
+  Shows all the measures between two points while you move the cursor, a bit like the temporary dimensions of Revit.<br>
+  A right triangle follows the cursor in the active construction plane, with the distance (D), the horizontal length (L), the height (H), dX, dY, the angle in the plane and the slope angle. Click to print the values in the command line and keep measuring from the same first point; the `Start` option picks a new one. Nothing is added to the model.<br>
+  Inspired by [Height.py](https://github.com/TSRChapman/LandArchTools-for-Rhino/blob/main/Height.py) from LandArchTools-for-Rhino by Thomas Chapman.<br>
+  Alias `dim`, which takes over the name of Rhino's own `Dim` command.<br>
+  Not tested yet on Rhino v8.
 
 - ### blocksByLayer_cmd.py
   Command to set the properties of the selected objects to "By Layer".
