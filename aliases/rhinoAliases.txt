@@ -44,7 +44,8 @@ maf '_MergeAllCoplanarFaces
 me '_MoveEdge
 mf '_MoveFace
 mh '_MakeHole
-mid '_midOsnap
+md '_midOsnap
+mm '_Mirror
 nb '_CreateUniqueBlock
 of '_Offset
 oo '_DisableOsnap _Toggle
